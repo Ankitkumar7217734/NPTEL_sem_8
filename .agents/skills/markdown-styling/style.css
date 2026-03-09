@@ -1,0 +1,199 @@
+/* ============================================
+   NPTEL Document Styling
+   Font: Times New Roman
+   Colors: Black (#000000) and Blue (#003399)
+   ============================================ */
+
+/* ---- Base ---- */
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  line-height: 1.7;
+  font-size: 12pt;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+/* ---- Headings ---- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+  color: #003399;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 2px solid #003399;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.6em;
+  border-bottom: 1px solid #003399;
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+/* ---- Paragraphs & Text ---- */
+p {
+  color: #000000;
+  margin-bottom: 0.8em;
+}
+
+strong {
+  color: #000000;
+  font-weight: bold;
+}
+
+em {
+  color: #000000;
+  font-style: italic;
+}
+
+/* ---- Links ---- */
+a {
+  color: #003399;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #001a66;
+}
+
+/* ---- Lists ---- */
+ul,
+ol {
+  color: #000000;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* ---- Blockquotes (callouts, notes) ---- */
+blockquote {
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  border-left: 4px solid #003399;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #f0f4ff;
+}
+
+blockquote p {
+  color: #000000;
+}
+
+/* ---- Horizontal Rules ---- */
+hr {
+  border: none;
+  border-top: 2px solid #003399;
+  margin: 2em 0;
+}
+
+/* ---- Tables ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Times New Roman", Times, serif;
+  margin: 1.5em 0;
+}
+
+th {
+  background-color: #003399;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.6em 1em;
+  text-align: left;
+  border: 1px solid #003399;
+}
+
+td {
+  color: #000000;
+  padding: 0.5em 1em;
+  border: 1px solid #cccccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f7fc;
+}
+
+/* ---- Code / Preformatted ---- */
+code {
+  font-family: "Times New Roman", Times, serif;
+  color: #003399;
+  background-color: #f0f4ff;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  background-color: #f0f4ff;
+  border: 1px solid #003399;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ---- Checkmarks & Correct Answers ---- */
+li strong {
+  color: #000000;
+}
+
+/* ---- Print Styles ---- */
+@media print {
+  body {
+    font-size: 11pt;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #003399;
+    page-break-after: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  th {
+    background-color: #003399 !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: #003399;
+  }
+}
