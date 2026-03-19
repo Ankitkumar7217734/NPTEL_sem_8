@@ -1,0 +1,717 @@
+
+%% Cognitive Psychology --- Week 2 Study Notes
+%% Object Perception and Pattern Recognition
+%% Prof. Naveen Kashyap, PhD --- IIT Guwahati
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage[expansion=false]{microtype}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Colors ────────────────────────────────────────────────
+\definecolor{cTeal}   {HTML}{00757A}
+\definecolor{cBlue}   {HTML}{1565C0}
+\definecolor{cPurple} {HTML}{6A1B9A}
+\definecolor{cOrange} {HTML}{E65100}
+\definecolor{cGreen}  {HTML}{2E7D32}
+\definecolor{cRed}    {HTML}{C62828}
+\definecolor{cIndigo} {HTML}{283593}
+\definecolor{cSlate}  {HTML}{37474F}
+
+\definecolor{cTealT}  {HTML}{E0F5F5}
+\definecolor{cBlueT}  {HTML}{E3F0FF}
+\definecolor{cPurpleT}{HTML}{F3E5F5}
+\definecolor{cOrangeT}{HTML}{FFF3E0}
+\definecolor{cGreenT} {HTML}{E8F5E9}
+\definecolor{cRedT}   {HTML}{FFEBEE}
+\definecolor{cIndigoT}{HTML}{E8EAF6}
+\definecolor{cYellow} {HTML}{FFF9C4}
+\definecolor{cAltRow} {HTML}{F5F5F5}
+\definecolor{cLGray}  {HTML}{E0E0E0}
+\definecolor{cCoverBg}{HTML}{0D1B2A}
+\definecolor{cGreenHL}{HTML}{C8E6C9}
+
+%% ── tcolorbox styles ──────────────────────────────────────
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{hintbox}[2]{
+  colback=#1, colframe=#2,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  breakable
+}
+
+\newtcolorbox{warnbox}{
+  colback=cRedT, colframe=cRed,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\small, breakable
+}
+
+\newtcolorbox{assignbox}[1]{
+  colback=cGreenT, colframe=cGreen,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt,
+  title={\textbf{Why this answer:}},
+  fonttitle=\bfseries\small,
+  coltitle=cGreen,
+  #1
+}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\rowcolors{2}{white}{cAltRow}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\color{cSlate}\large\bfseries}{}{0em}{}[\color{cLGray}\titlerule]
+\titleformat{\subsection}{\color{cOrange}\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\color{cGreen}\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray}Introduction to Cognitive Psychology --- Week 2 \textbar\ Page \thepage}
+\fancypagestyle{coverpage}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+%% ── COVER PAGE ────────────────────────────────────────────
+\thispagestyle{coverpage}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[cCoverBg] (current page.south west) rectangle (current page.north east);
+  \fill[cOrange]  (current page.north west) rectangle +(\paperwidth, -1.4cm);
+  \fill[cTeal]    (current page.south west) rectangle +(\paperwidth,  2.4cm);
+\end{tikzpicture}
+
+\vspace*{0.3cm}
+{\centering\color{white}\bfseries\normalsize INTRODUCTION TO COGNITIVE PSYCHOLOGY\par}
+\vspace{3.8cm}
+{\centering\color{orange!60!white}\bfseries\fontsize{36}{40}\selectfont WEEK 2\par}
+\vspace{0.6cm}
+{\centering\color{white}\bfseries\LARGE Object Perception\par}
+\vspace{0.4cm}
+{\centering\color{gray!40!white}\large \& Pattern Recognition\par}
+\vspace{0.5cm}
+{\centering\color{cOrange}\rule{12cm}{1.5pt}\par}
+\vspace{0.6cm}
+{\centering\color{gray!30!white}\large Prof.\ Naveen Kashyap, PhD\par}
+\vspace{0.2cm}
+{\centering\color{gray!50!white}\normalsize Indian Institute of Technology Guwahati\par}
+\vspace{0.2cm}
+{\centering\color{gray!50!white}\small Ref: Galotti --- Cognitive Psychology: In and Out of the Laboratory, Ch.\ 2\par}
+\vfill
+{\centering\color{white}\small
+  Distal Stimulus \textbar\ Gestalt \textbar\ Template Matching \textbar\ Featural Analysis\\[2pt]
+  Prototype Matching \textbar\ Bottom-Up \textbar\ Top-Down \textbar\ Direct Perception \textbar\ Geons\par}
+\vspace{0.5cm}
+\newpage
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cTeal}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 1 --- WHAT IS PERCEPTION? The Three-Stage Framework}}}
+
+Every second your eyes receive millions of light rays. Perception is the process by which sensory inputs are gathered and meaningfully interpreted. Vision and audition are the two most extensively studied perceptual systems.
+
+\subsection*{The Three Stages: From World to Experience}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cTeal}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Distal Stimulus} & The real physical object or event in the world. Example: a toy sitting on a table, a tree in your yard. It is the CAUSE of all the information flowing into your senses. \\
+\bb{Proximal Stimulus} & The pattern of energy that actually reaches your sense organs. For vision, this is the retinal image --- the pattern of light projected onto the back of your eye. NOT the object itself, just the signal arriving at the receptor. \\
+\bb{Percept} & The brain's meaningful interpretation of the proximal stimulus. The final conscious experience --- the recognized, organized, understood version of what you saw. \\
+\bb{Pattern Recognition} & The process of recognizing a particular object or event as belonging to a category. Example: seeing a collection of shapes and knowing it is the letter ``A,'' a dog, or a chair. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cTealT}{cTeal}
+\bb{Everyday Analogy:} The DISTAL stimulus is like a radio station broadcasting a signal. The PROXIMAL stimulus is the radio wave arriving at your antenna. The PERCEPT is the music you actually hear after the receiver processes the wave.
+\end{hintbox}
+
+\begin{warnbox}
+\bb{Exam Trap:} A toy on the table = DISTAL stimulus (real-world object). The retinal image of the toy = PROXIMAL stimulus. What you consciously see and recognize = PERCEPT. These three are NOT interchangeable on an exam.
+\end{warnbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cBlue}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 2 --- GESTALT APPROACH: The Mind Sees the Whole}}}
+
+The Gestalt psychologists argued that we do not experience the world as a collection of fragments --- we experience it as organized wholes. ``The whole is greater than the sum of its parts.''
+
+\subsection*{Figure-Ground Organization}
+
+The most basic act of visual perception is dividing the scene into FIGURE (the object of focus, definite shape, better remembered) and GROUND (the background, shapeless, recedes). Reversible figures like the Rubin vase flip between two interpretations. This whole process is called \textbf{form perception}.
+
+\begin{hintbox}{cBlueT}{cBlue}
+\bb{Rubin Vase Example:} You see either two silhouetted faces against a white background OR a white vase against a black background. The image is identical --- only your assignment of figure vs.\ ground changes.
+\end{hintbox}
+
+\subsection*{The Five Gestalt Principles}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{3.5cm}|L{4.5cm}|L{4.4cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Principle} & \color{white}\bb{Simple Idea} & \color{white}\bb{Everyday Example} & \color{white}\bb{Memory Tip} \\
+\hline
+\bb{Proximity (Nearness)} & Things close together are grouped together & Seats near each other in a cinema seem like a ``block'' & Near = Together \\
+\bb{Similarity} & Things that look alike are grouped together & People wearing the same jersey look like a team & Same look = same group \\
+\bb{Good Continuation} & We follow contours that form smooth, continuous lines & A road disappearing behind a hill still looks like one road & Smooth line wins \\
+\bb{Closure} & We mentally fill in gaps to see complete shapes & A dashed circle looks like a complete circle & Brain completes the picture \\
+\bb{Common Fate} & Things moving in the same direction are grouped together & A flock of birds all flying left looks like one unit & Move together = belong together \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Law of Pragnanz (Koffka, 1935)}
+
+Of all the possible ways to interpret a visual display, the brain picks the SIMPLEST and most STABLE interpretation. Like water finding the easiest path downhill, perception finds the simplest organizational solution.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Law of Pragnanz} & The brain always chooses the simplest, most stable interpretation of a visual display. ``Pragnanz'' is German for conciseness or precision. \\
+\bb{Limitation 1} & No explanation of HOW these principles are translated into actual cognitive or physiological brain processes --- they are descriptive, not mechanistic. \\
+\bb{Limitation 2} & The law of Pragnanz is circular unless additional specification is given: ``simplest'' needs to be defined independently to avoid circular reasoning. \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cPurple}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 3 --- BOTTOM-UP vs TOP-DOWN PROCESSING}}}
+
+Every act of perception involves two directions of information flow. These are not competing theories --- they usually work together.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cPurple}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Bottom-Up Processing (Data-driven)} & Starts with small pieces of raw sensory information from the environment, then combines them upward to build a percept. No expectations or prior knowledge involved. Example: you see edges, shapes, and light patterns --- then conclude you are looking at a door in a hallway. \\
+\bb{Top-Down Processing (Concept-driven)} & Starts with prior knowledge, expectations, and context to guide what you perceive. Example: knowing archways mark alleys, you expect to see a door at the end even before your eyes fully process it. \\
+\bb{Constructivist Approach} & The view that both top-down and bottom-up processes require the perceiver to ADD to or DISTORT the proximal stimulus to build a percept. The raw sensory data is incomplete --- the brain constructs the final experience. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cPurpleT}{cPurple}
+\bb{Key contrast:} Bottom-up = ``I will describe what I see, then figure out what it is.'' Top-down = ``I expect to see X in this context, so I'll look for it.'' Both are real. Reading distorted text uses top-down context to decipher letters your eyes cannot fully resolve bottom-up.
+\end{hintbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cOrange}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 4 --- PATTERN RECOGNITION THEORIES}}}
+
+When you recognize the letter ``A'' in any font, handwriting, or size --- how does your brain do it? Three classic theories try to answer this.
+
+\subsection*{Overview: Three Theories at a Glance}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.6cm}|L{3.5cm}|L{4.4cm}|L{4.7cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Theory} & \color{white}\bb{What Is Stored} & \color{white}\bb{How Matching Works} & \color{white}\bb{Main Weakness} \\
+\hline
+\bb{Template Matching} & Exact stored copies (templates) of every pattern & Incoming stimulus compared directly against stored templates. Recognition when exact/close match found. & Needs huge database; cannot handle new objects; cannot explain recognition of rotated/degraded versions \\
+\bb{Featural Analysis} & A set of distinct components (features) like lines, angles, curves & Break input into features; identify pattern by the combination present. & No good definition of ``feature'' beyond letters/line drawings; unclear how perceiver picks which features to use \\
+\bb{Prototype Matching} & An idealized average representation of each category (the ``typical'' example) & Compare input to stored prototypes. Approximate match is enough --- exact match not required. & Unclear how prototypes are formed and stored; hard to test quantitatively \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\subsection*{Template Matching}
+
+Think of a stencil. The stencil is the template --- recognition happens only when the input fits through the exact hole. Every letter ``A'' in every font would need its own template. Template matching is rigid and literal.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Template} & A stored exact-copy representation of a pattern. Recognition = input matches template. \\
+\bb{Limitation: Huge database} & You would need millions of templates to handle every version of every object you can recognize. \\
+\bb{Limitation: New objects} & How do you recognize something you have never seen before? No template exists for it. \\
+\bb{Limitation: Flexibility} & People recognize handwriting, rotated letters, and distorted text --- pure template matching cannot explain this. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cOrangeT}{cOrange}
+\bb{Good exam analogy:} Template matching is like a STENCIL (exact rigid fit required). Prototype matching is like a ``typical example'' stored in memory (approximate match is fine). Know the difference.
+\end{hintbox}
+
+\subsection*{Featural Analysis (FAM)}
+
+Instead of comparing a whole pattern, the brain breaks inputs down into FEATURES --- basic components like vertical lines, diagonal lines, curves, angles. It identifies the object from the combination of features present.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Feature} & A basic component of a stimulus --- a vertical line, horizontal line, diagonal, curve, angle. The parts that differ between stimuli and allow discrimination. \\
+\bb{Edge Detectors} & Cells found in frog retinas (and later mammals) that fire strongly to borders between light and dark. Evidence that the nervous system extracts features from the retinal image. \\
+\bb{Bug Detectors} & Cells that fire selectively to MOVING edges. Evidence for specialized feature detectors that extract specific types of information. \\
+\bb{Eleanor Gibson (1969)} & G and C are more often confused than G and F, because G and C share the feature of ``curved line open to the right.'' Feature overlap predicts confusion errors. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Biederman's Recognition by Components (RBC) Theory, 1987}
+
+Irving Biederman proposed that we recognize objects by decomposing them into GEONS --- geometric ions --- simple 3D shapes like cylinders, cones, cubes, wedges, and barrels. Biederman proposed 36 such primitive components.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{GEON} & A simple 3D geometric shape (cylinder, cube, cone, wedge, barrel, arch, handle, etc.). Geons are the visual equivalent of phonemes in language --- a small set of units that combine to represent a huge variety of objects. \\
+\bb{Analogy to Phonemes} & Phonemes are the $\sim$44 basic sounds of speech that combine to form all words. Geons are the $\sim$36 basic 3D shapes that combine to form all objects. \\
+\bb{Evidence} & Any fictional object you have never seen can still be identified by its geon components --- observers show high agreement. \\
+\bb{Segmentation} & The visual system first segments objects at concavities to separate them into geon components, then identifies the whole from its component list. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{warnbox}
+\bb{Exam Trap:} Geons are to VISUAL PERCEPTION what phonemes are to LANGUAGE --- not the other way around. Also: 36 geons (Biederman), $\sim$44 phonemes in English. Know both numbers.
+\end{warnbox}
+
+\subsection*{Prototype Matching}
+
+Rather than exact templates, the brain stores PROTOTYPES --- idealized averaged representations of a category. An approximate match is sufficient --- not a perfect one.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Prototype} & An idealized mental representation of a category --- like the ``average'' member. Not a specific instance but an abstracted best-representative example. \\
+\bb{Posner and Keele (1968)} & Demonstrated people form prototypes quickly during initial classification tasks. Participants who had never seen the prototype directly could still recognize it --- showing the prototype is mentally constructed, not directly stored. \\
+\bb{Advantage over Templates} & Allows for natural variability --- prototypes do not require exact matches, so rotated, distorted, or novel versions of known categories still get recognized. \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cGreen}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 5 --- THE PANDEMONIUM MODEL (Selfridge, 1959)}}}
+
+Oliver Selfridge proposed a hierarchy of ``demons'' (feature detectors) that all scream when they detect their specific feature, and the loudest combined screaming picks the final recognition.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Demon Level} & \color{white}\bb{What It Does (Plain English)} \\
+\hline
+\bb{Image Demons} & The bottom level. Register the raw visual input --- making a copy of the stimulus pattern for all the other demons to inspect. Like the eyes passing the image inward. \\
+\bb{Feature Demons} & Each feature demon watches for one specific feature: a vertical line, a diagonal, a curve, an angle. When it finds its feature, it screams. \\
+\bb{Cognitive (Pattern) Demons} & Each represents one letter or pattern. Listens to the feature demons and shouts louder when the features it needs are present. More relevant features = louder screaming. \\
+\bb{Decision Demon} & At the top. Listens to all the cognitive demons and picks whichever is screaming loudest. That pattern is the recognized object. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cGreenT}{cGreen}
+\bb{Analogy:} Show the letter ``B.'' Everyone who sees their feature (curves, vertical lines) starts yelling. The cognitive demon for ``B'' yells louder than the demon for ``R'' or ``P.'' The decision demon hears ``B!'' and declares recognition. Parallel, bottom-up, hierarchical feature processing.
+\end{hintbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cRed}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 6 --- DAVID MARR'S COMPUTATIONAL MODEL OF PERCEPTION}}}
+
+David Marr's model is described as the most computationally elegant model of visual perception. It describes perception as constructing three successive mental representations, each more complex than the last.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cRed}\color{white}\bb{Stage} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Primal Sketch (2D)} & The brain represents areas of relative brightness and darkness in the 2D retinal image, plus localized geometric structures. This stage handles BOUNDARY DETECTION --- where do the edges of objects lie? \\
+\bb{$2\tfrac{1}{2}$D Sketch} & Using cues like shading, texture gradients, and edges, the brain constructs a surface-based description --- what the surfaces ARE and where they lie in DEPTH relative to the viewer. It is viewer-centred. \\
+\bb{Final 3D Sketch} & Object-centred representation --- the brain recognizes WHAT the objects are and understands the meaning of the whole visual scene. This stage is independent of viewpoint: the same object is recognized from any angle. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cRedT}{cRed}
+\bb{Memory aid:} (1) Primal Sketch = ``Where are the edges?'' (2D brightness/boundary map). (2) $2\tfrac{1}{2}$D Sketch = ``What do the surfaces look like from where I am standing?'' (3) 3D Sketch = ``What IS this object?'' (full object recognition, viewpoint-independent).
+\end{hintbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cIndigo}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 7 --- DIRECT PERCEPTION (Gibson, 1979) \& PERCEPTUAL CONSTANCY}}}
+
+While constructivist theories say the brain ADDS to the proximal stimulus to create a percept, James Gibson took the opposite position: the environment already contains so much information that the brain needs to do very little work.
+
+\subsection*{Gibson's Theory of Direct Perception}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cIndigo}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Direct Perception} & The light hitting the retina already contains highly organized, rich information. The brain does NOT need to construct or infer --- it directly picks up information from the structured environment. \\
+\bb{Constructivist vs Direct} & Constructivist: brain constructs percepts from incomplete data. Gibson: perception is direct because the environment contains all needed information --- no construction necessary. \\
+\bb{Invariant Information} & Certain aspects of stimuli remain CONSTANT despite changes over time or in our physical relationship to them. For example, the texture gradient of a surface stays proportional to distance regardless of your exact viewpoint. \\
+\bb{Optic Flow} & Gibson's key concept developed while working with WWII pilots. As a pilot approaches the runway, nearby objects appear to move faster and expand outward. Far objects seem stationary. This structured pattern gives all the depth and direction information needed. \\
+\bb{Affordances} & The acts or behaviors an object, place, or event PERMITS or INVITES. A chair affords sitting, a door knob affords grasping, a flat surface affords walking. Affordances are perceived DIRECTLY from the environment --- no inference needed. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cIndigoT}{cIndigo}
+\bb{Affordance examples from everyday life:} A mug handle affords gripping. A button affords pressing. A steep ledge affords NOT jumping. Good interface design communicates affordances clearly. Poor design (like a push/pull door with no visible cue) violates natural affordance perception.
+\end{hintbox}
+
+\subsection*{Perceptual Constancy}
+
+Even though the proximal stimulus (retinal image) changes constantly as we move around, our perception of objects remains stable.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{3.5cm}|L{3.5cm}|L{5.4cm}|}
+\hline
+\rowcolor{cIndigo}\color{white}\bb{Type} & \color{white}\bb{What Changes (Retinal Image)} & \color{white}\bb{What Stays Constant (Percept)} & \color{white}\bb{Example} \\
+\hline
+\bb{Size Constancy} & Retinal image gets smaller as object moves away & Perceived SIZE stays the same & A balloon floating into the sky --- retinal image shrinks, but you see it as the same size balloon \\
+\bb{Shape Constancy} & Retinal image changes shape as object tilts & Perceived SHAPE stays stable & A coin tilted away looks like an ellipse on the retina, but you still see it as a round coin \\
+\bb{Brightness Constancy} & Amount of reflected light changes with illumination & Perceived surface BRIGHTNESS stays the same & A white shirt looks equally white in dim light and bright sunlight \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cSlate}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 8 --- TOP-DOWN EFFECTS \& CLINICAL OBSERVATIONS}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cSlate}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Word Superiority Effect} & Letters are easier to perceive when they appear inside a familiar word than in isolation or in an unfamiliar string. Context activates top-down expectations that boost perception. \\
+\bb{Connectionist Model of Word Perception} & Input is processed at multiple levels simultaneously: features $\to$ letters $\to$ words. Each level activates the ones above and below. Perceiving a word also activates all the letters in it (top-down activation). \\
+\bb{Change Blindness (Rensink, 2002)} & Failure to notice changes to objects or scenes across brief interruptions. Demonstrates that we do NOT store every visual detail --- we represent the overall MEANING of a scene. Perception is driven by expectations about meaning. \\
+\bb{Perceptual Learning (E.J.\ Gibson, 1969)} & Perception improves with practice. Expert wine tasters, radiologists, and chess players all perceive more in their domain than novices. Practice enables perceivers to learn which features are most diagnostic. \\
+\bb{Visual Agnosia} & A brain disorder where a patient cannot recognize objects by sight, even though basic visual processing is intact. The percept exists but cannot be matched to stored knowledge. \\
+\bb{Prosopagnosia} & A specific form of visual agnosia: inability to recognize FACES while other object recognition remains relatively intact. Demonstrates that face recognition uses specialized neural machinery separate from general object recognition. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{warnbox}
+\bb{Exam Trap:} Change blindness does NOT mean we are bad at perception. It shows we perceive meaning and gist efficiently --- we just do not store every visual detail. This is a feature of top-down, meaning-driven perception, not a bug.
+\end{warnbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cTeal}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries KEY PEOPLE --- Who Contributed What in Perception Research}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{4.5cm}|L{10.7cm}|}
+\hline
+\rowcolor{cTeal}\color{white}\bb{Person} & \color{white}\bb{Key Contribution} \\
+\hline
+\bb{Gestalt Psychologists} (Wertheimer, Kohler, Koffka --- early 1900s) & Five principles of perceptual organization; Law of Pragnanz (Koffka, 1935); figure-ground organization \\
+\bb{Oliver Selfridge (1959)} & Pandemonium model --- hierarchical feature detector ``demons'' that scream for recognition \\
+\bb{Eleanor Gibson (1969)} & Feature confusion studies (G vs C); perceptual learning research \\
+\bb{James Gibson (1979)} & Direct perception theory; optic flow; affordances; animal-environment ecosystem approach \\
+\bb{Irving Biederman (1987)} & Recognition by Components (RBC) theory; 36 geons as basic units of visual object recognition \\
+\bb{Posner and Keele (1968)} & Demonstrated that people rapidly form mental prototypes during classification tasks \\
+\bb{David Marr} & Three-stage computational model: primal sketch, $2\tfrac{1}{2}$D sketch, 3D sketch \\
+\bb{Rensink (2002)} & Formalized change blindness research; showed perception tracks meaning not exhaustive detail \\
+\hline
+\end{tabular}
+\end{center}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cBlue}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries EXAM Q\&A --- 16 Questions in Cover-and-Recall Format}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|L{5.5cm}|L{9.7cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Question} & \color{white}\bb{Answer} \\
+\hline
+What is the difference between a distal and a proximal stimulus? & DISTAL = the real physical object in the world (e.g., the tree). PROXIMAL = the pattern of energy reaching your sense organs (e.g., the retinal image of the tree). \\
+What is a percept? & The brain's meaningful interpretation of the proximal stimulus. The final conscious experience of a recognized, understood object --- going beyond raw sensation. \\
+What does ``figure-ground organization'' mean? & The perceptual process of dividing a visual scene into a FIGURE (focal object, definite shape, better remembered) and GROUND (background, shapeless, recedes). \\
+Name the five Gestalt principles of perceptual organization. & (1) Proximity. (2) Similarity. (3) Good Continuation. (4) Closure. (5) Common Fate. \\
+What is the Law of Pragnanz and who stated it? & Koffka (1935). Of all possible interpretations, the brain selects the SIMPLEST and most STABLE organization. The master principle of Gestalt. \\
+Distinguish bottom-up from top-down processing. & Bottom-up (data-driven): starts with raw sensory fragments, builds up. Top-down (concept-driven): starts with expectations and prior knowledge, uses them to guide perception. \\
+What is template matching and its main limitation? & Each pattern compared to exact stored copies (templates). Limitation: needs huge database; cannot handle new objects; cannot explain recognition of rotated or degraded versions. \\
+What is Biederman's RBC theory and what are geons? & Recognition by Components theory (1987). Objects recognized by decomposing into GEONS --- $\sim$36 basic 3D shapes. Geons are to visual perception what phonemes are to language. \\
+What is prototype matching and how does it differ from template matching? & Prototype = idealized averaged representation; approximate match sufficient. Template = exact/near-exact match required to a stored copy. \\
+Describe Selfridge's Pandemonium model. & Image demons copy input. Feature demons each detect one feature and scream. Cognitive demons shout louder when their features are present. Decision demon picks the loudest cognitive demon. \\
+What are David Marr's three stages of visual perception? & (1) Primal Sketch: 2D boundary map. (2) $2\tfrac{1}{2}$D Sketch: viewer-centred surface and depth. (3) 3D Sketch: object-centred recognition, viewpoint-independent. \\
+What is Gibson's concept of affordances? & The acts or behaviors that objects, places, and events PERMIT or INVITE. Perceived directly --- no inference needed. \\
+What is size constancy? Give an example. & Perceived size stays constant even as the retinal image changes size with distance. Example: a balloon floating away shrinks on the retina but is still perceived as the same-size balloon. \\
+What is change blindness and what does it reveal? & Failure to notice changes across brief interruptions (Rensink, 2002). We do NOT store every visual detail --- we track the overall MEANING of a scene. \\
+What is prosopagnosia? & Selective inability to recognize FACES while general object recognition is relatively intact. Demonstrates specialized neural systems for face recognition. \\
+What is the word superiority effect? & Letters perceived more accurately when they appear inside a familiar word than in isolation. Evidence for top-down, context-driven facilitation of perception. \\
+\hline
+\end{tabular}
+\end{center}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cOrange}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries ONE-PAGE CHEAT SHEET}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3.2cm}|L{12cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Topic} & \color{white}\bb{What to Remember (Plain Words)} \\
+\hline
+\bb{Distal vs Proximal vs Percept} & Distal = real-world object. Proximal = energy reaching sense organs (retinal image). Percept = brain's meaningful interpretation. Know which is which. \\
+\bb{Pattern Recognition} & Recognizing an object as belonging to a category. The endpoint of perception. \\
+\bb{Figure-Ground} & Dividing a scene into focal object (figure) and background (ground). Reversible figures flip figure and ground. \\
+\bb{Gestalt Principles} & Proximity, Similarity, Good Continuation, Closure, Common Fate. Master law = Pragnanz (simplest/most stable). \\
+\bb{Bottom-Up Processing} & Starts from raw sensory data, builds up. Data-driven. No prior knowledge involved. \\
+\bb{Top-Down Processing} & Starts from expectations and context, guides perception downward. Concept-driven. \\
+\bb{Template Matching} & Exact stored copy comparison. Rigid --- like a stencil. Limitation: huge database needed. \\
+\bb{Featural Analysis} & Breaks input into features (lines, angles, curves). Recognition from feature combinations. Edge/bug detectors support this. \\
+\bb{Prototype Matching} & Idealized category average. Approximate match sufficient. More flexible than templates. \\
+\bb{Biederman's Geons} & 36 primitive 3D shapes. Geons : visual perception :: phonemes : language. Object recognition = combination of geons. \\
+\bb{Pandemonium Model} & Selfridge (1959). Hierarchy of demons: Image $\to$ Feature $\to$ Cognitive $\to$ Decision. Feature-based, parallel, hierarchical. \\
+\bb{David Marr's Model} & (1) Primal Sketch (edges, 2D). (2) $2\tfrac{1}{2}$D Sketch (surfaces, depth, viewer-centred). (3) 3D Sketch (object identity, viewpoint-free). \\
+\bb{Direct Perception} & Gibson (1979). Environment already contains all needed information. Brain picks it up directly. No construction needed. \\
+\bb{Affordances} & What objects permit/invite. Chair affords sitting. Perceived directly from the environment without inference. \\
+\bb{Optic Flow} & Gibson. Movement pattern when approaching a surface. Near things flow faster. Used for depth and direction. \\
+\bb{Size Constancy} & Perceived size stays stable even as retinal image size changes with distance. \\
+\bb{Change Blindness} & We miss changes across interruptions. We store meaning/gist, not every visual detail. Top-down, meaning-driven. \\
+\bb{Word Superiority Effect} & Letters recognized better in words than in isolation. Top-down context boosts letter perception. \\
+\bb{Prosopagnosia} & Face recognition specifically impaired. General object recognition intact. Faces use specialized neural mechanisms. \\
+\bb{Perceptual Learning} & E.J.\ Gibson (1969). Practice improves perception. Experts learn which features to attend to. \\
+\hline
+\end{tabular}
+\end{center}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cGreen}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries ASSIGNMENT 2 --- Full Solutions with Explanations}}}
+
+\subsubsection*{Question 1}
+\textit{A toy on the table represents:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+\rowcolor{cGreenHL} & \textbf{A.\ Distal stimulus \checkmark} \\
+& B.\ Proximal stimulus \\
+& C.\ Retinal image \\
+& D.\ Percept \\
+\end{tabular}
+
+\begin{assignbox}{}
+The toy sitting on the table is the real physical object in the environment --- the source of sensory information. That is the definition of a DISTAL stimulus.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: B (Proximal stimulus) would be the retinal image of the toy. C (Retinal image) is itself a type of proximal stimulus. D (Percept) is the brain's interpreted experience --- further downstream.}
+
+\subsubsection*{Question 2}
+\textit{A patient with prosopagnosia has difficulty recognizing:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Drawing of objects \\
+& B.\ Moving objects \\
+\rowcolor{cGreenHL} & \textbf{C.\ Faces \checkmark} \\
+& D.\ Sounds \\
+\end{tabular}
+
+\begin{assignbox}{}
+Prosopagnosia is specifically impaired FACE recognition. General object recognition is relatively intact. This demonstrates that face recognition uses specialized neural circuits separate from other object recognition pathways.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A and B are handled by general object recognition systems that are largely intact in prosopagnosia. D (Sounds) is an auditory function --- prosopagnosia is a visual disorder.}
+
+\subsubsection*{Question 3}
+\textit{When you let go of a balloon and it floats away, the retinal image gets smaller but you do not perceive the balloon as shrinking. This is an example of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Pattern recognition \\
+& B.\ Bottom-up processing \\
+\rowcolor{cGreenHL} & \textbf{C.\ Size constancy \checkmark} \\
+& D.\ Figure-ground organization \\
+\end{tabular}
+
+\begin{assignbox}{}
+SIZE CONSTANCY: perceived size remains stable even though the retinal image changes with distance. The brain compensates for the diminishing retinal image, maintaining a stable perceived size of the balloon.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Pattern recognition) is about classifying objects into categories. B (Bottom-up processing) describes how perception builds from raw data. D (Figure-ground) is about separating objects from backgrounds.}
+
+\subsubsection*{Question 4}
+\textit{The meaningful interpretation of a proximal stimulus is called the:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+\rowcolor{cGreenHL} & \textbf{A.\ Percept \checkmark} \\
+& B.\ Sensation \\
+& C.\ Distal stimulus \\
+& D.\ Retinal Image \\
+\end{tabular}
+
+\begin{assignbox}{}
+A PERCEPT is the brain's final meaningful interpretation of the proximal stimulus. It is the organized, recognized conscious experience --- what you ``see'' as a result of all the perceptual processing.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: B (Sensation) is more basic than a percept --- raw detection of energy before meaningful interpretation. C (Distal stimulus) is the real-world object, the starting point. D (Retinal image) is itself a type of proximal stimulus.}
+
+\subsubsection*{Question 5}
+\textit{The two best studied forms of perception are:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Visual and Haptic \\
+& B.\ Visual and Olfactory \\
+\rowcolor{cGreenHL} & \textbf{C.\ Visual and Auditory \checkmark} \\
+& D.\ Auditory and Olfactory \\
+\end{tabular}
+
+\begin{assignbox}{}
+VISUAL and AUDITORY perception are the two most extensively studied forms in cognitive psychology. They dominate everyday cognition and have the richest experimental literature.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Haptic) has been studied but is much less prominent. B and D include olfactory, which is understudied relative to vision and hearing.}
+
+\subsubsection*{Question 6}
+\textit{Which of the following represents a good example of a proximal stimulus?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ A book on a shelf \\
+& B.\ A tree in your yard \\
+& C.\ A building on the horizon \\
+\rowcolor{cGreenHL} & \textbf{D.\ The retinal image formed by a tree \checkmark} \\
+\end{tabular}
+
+\begin{assignbox}{}
+The RETINAL IMAGE is the pattern of light projected onto the retina --- this is the energy pattern that actually arrives at the sense organs. That is the definition of a proximal stimulus.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A, B, and C (book, tree, building) are all physical objects in the real world --- they are DISTAL stimuli, not proximal stimuli.}
+
+\subsubsection*{Question 7}
+\textit{According to Gibson's theory, the acts or behaviors permitted by objects, places, and events are called:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Consequences \\
+& B.\ Functions \\
+\rowcolor{cGreenHL} & \textbf{C.\ Affordances \checkmark} \\
+& D.\ Direct processes \\
+\end{tabular}
+
+\begin{assignbox}{}
+AFFORDANCES (Gibson, 1979) are the actions, behaviors, or interactions that objects and environments permit or invite. A chair affords sitting; a door knob affords grasping. They are perceived DIRECTLY, without cognitive inference.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Consequences) implies outcomes after action. B (Functions) is close but not Gibson's specific technical term. D (Direct processes) refers to his broader theory, not specifically to the object-behavior relationship.}
+
+\subsubsection*{Question 8}
+\textit{A stencil provides a good analogy for the theory of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Prototype matching \\
+\rowcolor{cGreenHL} & \textbf{B.\ Template matching \checkmark} \\
+& C.\ Good continuation \\
+& D.\ Featural analysis \\
+\end{tabular}
+
+\begin{assignbox}{}
+A STENCIL is a rigid, exact-shaped cutout --- recognition happens only when the input fits the stencil precisely. This mirrors TEMPLATE MATCHING: recognition requires an exact or near-exact match to a stored rigid pattern.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Prototype matching) is flexible --- approximate matches work. A stencil does NOT allow approximate fits. C (Good continuation) is a Gestalt principle about contour grouping. D (Featural analysis) is about breaking patterns into parts.}
+
+\subsubsection*{Question 9}
+\textit{\_\_\_\_\_ are to visual perception what phonemes are to language, according to Biederman.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Receptors \\
+& B.\ Retinas \\
+& C.\ Distal stimuli \\
+\rowcolor{cGreenHL} & \textbf{D.\ Geons \checkmark} \\
+\end{tabular}
+
+\begin{assignbox}{}
+GEONS (geometric ions) are the $\sim$36 primitive 3D shapes that serve as the basic building blocks of visual object recognition. Just as $\sim$44 phonemes combine to form all words, geons combine to form all objects.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Receptors) are sensory cells in the retina --- they detect light, not object components. B (Retinas) are the light-sensitive surfaces of the eye. C (Distal stimuli) are real-world objects, the starting point of perception.}
+
+\subsubsection*{Question 10}
+\textit{The principle governing reversible figures is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+\rowcolor{cGreenHL} & \textbf{A.\ Figure-ground organization \checkmark} \\
+& B.\ Size constancy \\
+& C.\ Dimensionality \\
+& D.\ Retinal imagery \\
+\end{tabular}
+
+\begin{assignbox}{}
+FIGURE-GROUND ORGANIZATION governs reversible figures. In images like the Rubin vase, what is seen as the focal object (figure) vs.\ the background (ground) alternates. The percept flips between two valid figure-ground assignments.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: B (Size constancy) is about stable perceived size. C (Dimensionality) is not a standard perceptual principle relevant here. D (Retinal imagery) refers to the proximal stimulus --- not a perceptual organizing principle.}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{5.5cm}|L{8.9cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Q\#} & \color{white}\bb{Topic} & \color{white}\bb{Correct Answer} \\
+\hline
+1 & Distal vs.\ Proximal Stimulus & A --- Distal Stimulus \\
+2 & Prosopagnosia & C --- Faces \\
+3 & Perceptual Constancy & C --- Size Constancy \\
+4 & Percept Definition & A --- Percept \\
+5 & Most Studied Perception Forms & C --- Visual and Auditory \\
+6 & Proximal Stimulus Example & D --- Retinal Image of a Tree \\
+7 & Gibson's Affordances & C --- Affordances \\
+8 & Template Matching & B --- Template Matching \\
+9 & Biederman's Geons & D --- Geons \\
+10 & Reversible Figures & A --- Figure-Ground Organization \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\color{cSlate}\textit{Reference: Cognitive Psychology: In and Out of the Laboratory --- Kathleen M.\ Galotti, Chapter 2 (2010)}}
+
+\end{document}

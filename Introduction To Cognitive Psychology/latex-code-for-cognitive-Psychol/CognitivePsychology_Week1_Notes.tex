@@ -1,0 +1,754 @@
+%% ============================================================
+%% Cognitive Psychology — Week 1 Study Notes
+%% History of Cognitive Psychology + Research Methods
+%% Prof. Naveen Kashyap, PhD — IIT Guwahati
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Colors ────────────────────────────────────────────────
+\definecolor{cTeal}   {HTML}{00757A}
+\definecolor{cBlue}   {HTML}{1565C0}
+\definecolor{cPurple} {HTML}{6A1B9A}
+\definecolor{cOrange} {HTML}{E65100}
+\definecolor{cGreen}  {HTML}{2E7D32}
+\definecolor{cRed}    {HTML}{C62828}
+\definecolor{cIndigo} {HTML}{283593}
+\definecolor{cSlate}  {HTML}{37474F}
+
+\definecolor{cTealT}  {HTML}{E0F5F5}
+\definecolor{cBlueT}  {HTML}{E3F0FF}
+\definecolor{cPurpleT}{HTML}{F3E5F5}
+\definecolor{cOrangeT}{HTML}{FFF3E0}
+\definecolor{cGreenT} {HTML}{E8F5E9}
+\definecolor{cRedT}   {HTML}{FFEBEE}
+\definecolor{cIndigoT}{HTML}{E8EAF6}
+\definecolor{cSlateT} {HTML}{ECEFF1}
+\definecolor{cYellow} {HTML}{FFF9C4}
+\definecolor{cAltRow} {HTML}{F5F5F5}
+\definecolor{cLGray}  {HTML}{E0E0E0}
+\definecolor{cCoverBg}{HTML}{0D1B2A}
+\definecolor{cGreenHL}{HTML}{C8E6C9}
+
+%% ── tcolorbox styles ──────────────────────────────────────
+\tcbuselibrary{skins, breakable}
+
+\newtcolorbox{bannerbox}[2]{
+  colback=#1, colframe=#1, colupper=white,
+  fontupper=\bfseries\large,
+  boxrule=0pt, arc=4pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt,
+  title={}, #2
+}
+
+\newtcolorbox{hintbox}[2]{
+  colback=#1, colframe=#2,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  breakable
+}
+
+\newtcolorbox{warnbox}{
+  colback=cRedT, colframe=cRed,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\small, breakable
+}
+
+\newtcolorbox{assignbox}[1]{
+  colback=cGreenT, colframe=cGreen,
+  boxrule=0.8pt, arc=3pt,
+  left=10pt, right=10pt, top=6pt, bottom=6pt,
+  title={\textbf{Why this answer:}},
+  fonttitle=\bfseries\small,
+  coltitle=cGreen,
+  #1
+}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{J}[1]{>{\arraybackslash}p{#1}}
+
+% Row colors for tables
+\rowcolors{2}{white}{cAltRow}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\color{cSlate}\large\bfseries}{}{0em}{}[\color{cLGray}\titlerule]
+\titleformat{\subsection}{\color{cTeal}\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\color{cBlue}\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\color{gray}Introduction to Cognitive Psychology --- Week 1 \textbar\ Page \thepage}
+\fancypagestyle{coverpage}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\newcommand{\defterm}[1]{\textbf{\color{cSlate}#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+%% ── COVER PAGE ────────────────────────────────────────────
+\thispagestyle{coverpage}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[cCoverBg] (current page.south west) rectangle (current page.north east);
+  \fill[cTeal]    (current page.north west) rectangle +(\paperwidth, -1.4cm);
+  \fill[cBlue]    (current page.south west) rectangle +(\paperwidth,  2.4cm);
+\end{tikzpicture}
+
+\vspace*{0.3cm}
+{\centering\color{white}\bfseries\normalsize INTRODUCTION TO COGNITIVE PSYCHOLOGY\par}
+\vspace{3.8cm}
+{\centering\color{cyan!60!white}\bfseries\fontsize{36}{40}\selectfont WEEK 1\par}
+\vspace{0.6cm}
+{\centering\color{white}\bfseries\LARGE History of Cognitive Psychology\par}
+\vspace{0.4cm}
+{\centering\color{gray!40!white}\large \& Research Methods\par}
+\vspace{0.5cm}
+{\centering\color{cTeal}\rule{12cm}{1.5pt}\par}
+\vspace{0.6cm}
+{\centering\color{gray!30!white}\large Prof.\ Naveen Kashyap, PhD\par}
+\vspace{0.2cm}
+{\centering\color{gray!50!white}\normalsize Indian Institute of Technology Guwahati\par}
+\vspace{0.2cm}
+{\centering\color{gray!50!white}\small Ref: Galotti --- Cognitive Psychology: In and Out of the Laboratory\par}
+\vfill
+{\centering\color{white}\small
+  Empiricism \textbar\ Structuralism \textbar\ Functionalism \textbar\ Gestalt \textbar\ Behaviorism\\[2pt]
+  Cognitive Revolution \textbar\ Paradigms \textbar\ Behavioral Methods \textbar\ Neural Methods\par}
+\vspace{0.5cm}
+\newpage
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cTeal}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 1 --- EARLY FOUNDATIONS: Where Does Knowledge Come From?}}}
+
+Before psychology was a science, philosophers argued about a single big question: is the human mind shaped by \textit{experience}, or does \textit{biology} decide what we know?
+
+\subsection*{The Big Debate: Empiricism vs Nativism}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cTeal}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Empiricism} & Mind starts blank (like an empty whiteboard). Everything we know comes from senses and experience. Champions: Aristotle and John Locke (``blank slate'' --- tabula rasa). \\
+\bb{Nativism} & We are born with built-in knowledge or mental structures. Biology and heredity shape the mind. Champions: Plato and Descartes. \\
+\bb{Tabula Rasa} & Latin for ``blank slate.'' John Locke's idea that the newborn mind is empty --- every idea comes from sensory experience, like writing on a clean page. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cTealT}{cTeal}
+\bb{Simple way to remember it:} Empiricists say ``You \textit{LEARN} it.'' Nativists say ``You are \textit{BORN} with it.'' Both views survive in modern cognitive psychology --- Chomsky argued language is partly innate (nativist), while learning theorists emphasize experience shapes the mind (empiricist).
+\end{hintbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cBlue}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 2 --- SCHOOLS OF PSYCHOLOGY: How Did Psychology Start?}}}
+
+Psychology became a formal science in 1879. Different ``schools'' competed to explain the mind --- each with a different idea about what to study and how.
+
+\subsection*{Overview: The Four Major Early Schools}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{3cm}|L{4.5cm}|L{4.5cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{School} & \color{white}\bb{Who Founded It} & \color{white}\bb{Core Idea (Simple)} & \color{white}\bb{Key Features} \\
+\hline
+\bb{Structuralism} & Wilhelm Wundt (1879) & Break the mind into its smallest basic parts --- like chemistry breaks matter into elements. & Used introspection (self-reporting thoughts). Founded the first psychology lab. \\
+\bb{Functionalism} & William James (1842--1910) & Ask \textit{WHY} the mind works, not just \textit{WHAT} it contains. Focus on purpose and survival. & Inspired by Darwin's evolution. Studied real-world behavior, not sterile labs. \\
+\bb{Gestalt} & Wertheimer, Kohler, Koffka (early 1900s) & The mind sees the \textit{WHOLE} pattern, not just parts added together. & ``The whole is greater than the sum of its parts.'' Like seeing a face, not just dots. \\
+\bb{Behaviorism} & Watson, Skinner, Hull (1900s) & Only study observable behavior. Ignore the ``black box'' of internal mental events. & Skinner rejected any talk of the mind. Failed to explain how language is acquired. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Structuralism --- Wilhelm Wundt (1879)}
+
+Wundt opened the first psychology laboratory in Leipzig, Germany in 1879 --- the official birth of scientific psychology. Structuralism tried to break down mental experience into its simplest elements. Method: introspection --- asking people to carefully report their own mental states.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Contribution 1} & Showed mental activity can be broken down into simpler basic operations --- analyzing components of perception like color, shape, and texture. \\
+\bb{Contribution 2} & Developed objective, systematic methods for studying mental activity in a controlled laboratory setting. \\
+\bb{Weakness} & Introspection is unreliable --- different people report different things about the same experience. Cannot study unconscious processes or complex behaviors. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{warnbox}
+\bb{Exam Trap:} Wundt founded \textit{STRUCTURALISM}, not functionalism. A common exam trick swaps Wundt and James. Remember: Wundt = Structure (the WHAT); James = Function (the WHY).
+\end{warnbox}
+
+\subsection*{Functionalism --- William James (1842--1910)}
+
+William James wanted to know \textit{WHY} the mind works as it does. Just like evolution asks why a bird has wings (to fly, to survive), functionalism asks why we have emotions, memory, or attention (to help us adapt). James preferred studying behavior in real life rather than in artificial labs.
+
+\subsection*{Gestalt Psychology}
+
+The whole is greater than the sum of its parts. When you listen to a melody, you do not hear individual notes --- you hear a song. Example: You see a circle made of dashes. Your brain fills in the gaps to perceive a complete circle, even though no continuous line exists.
+
+\subsection*{Behaviorism}
+
+Behaviorists argued: we cannot see the mind, so we should only study observable behavior. B.F.\ Skinner was the most extreme: he rejected \textit{any} mention of internal mental events.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Clark L.\ Hull} & Allowed some internal states (like motivation) to be inferred from behavior --- but only if directly tied to observable responses. \\
+\bb{B.F.\ Skinner} & Rejected ALL discussion of internal mental events. Only stimulus-response patterns matter. Famous for operant conditioning with animals. \\
+\bb{Why Behaviorism Failed} & Could not explain language. Chomsky (1957) showed children learn grammar rules they were never taught --- the mind must have internal structure beyond stimulus-response. Also failed on perception and mental imagery. \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cPurple}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 3 --- THE COGNITIVE REVOLUTION: Opening the Black Box}}}
+
+By the late 1950s, behaviorism had reached its limits. The Cognitive Revolution re-opened the black box of mental processes --- and the \textit{computer} became the key inspiration.
+
+\subsection*{Key Players}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cPurple}\color{white}\bb{Person} & \color{white}\bb{Contribution} \\
+\hline
+\bb{Herbert A.\ Simon} & Showed human problem-solving could be modeled as a computer program. Co-developed the General Problem Solver algorithm. \\
+\bb{Alan Newell} & Collaborated with Simon on computer models of cognition. Established that thinking follows rule-based, specifiable processes. \\
+\bb{Noam Chomsky} & Demolished behaviorism in 1957 by showing language has internal grammatical structure that cannot be explained by stimulus-response alone. \\
+\bb{George Miller} & ``The Magical Number Seven'' (1956) --- working memory holds about 7 items ($\pm$2). Showed cognitive limits can be measured scientifically. \\
+\bb{Ulric Neisser} & Wrote the first cognitive psychology textbook (1967). Helped legitimize the field as a distinct scientific discipline. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cPurpleT}{cPurple}
+\bb{Key takeaway:} The cognitive revolution happened because (1) behaviorism could not explain language, (2) computers provided a new model for mental processes, and (3) researchers like Chomsky and Miller showed that internal mental structures are real and scientifically measurable.
+\end{hintbox}
+
+\subsection*{Limitations of the Computer Metaphor}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cPurple}\color{white}\bb{Limitation} & \color{white}\bb{Explanation} \\
+\hline
+\bb{Different Hardware} & Computer programs can run on any compatible machine. Mental processes cannot be transferred from one brain to another --- biology matters. \\
+\bb{Hardware Encoding} & In computers, repetitive programs can become dedicated circuits. The brain--mind relationship is far more complex. \\
+\bb{Levels of Analysis} & To fully understand a mental process you need BOTH: the functional description (what it does) AND the structural description (how the brain achieves it). \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cOrange}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 4 --- MENTAL REPRESENTATIONS \& PROCESSING}}}
+
+\subsection*{What is a Mental Representation?}
+
+A representation is a physical state that carries information about something else. In the brain, representations are patterns of neural connections that stand for objects, events, or concepts.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Form} & The FORMAT of storage --- how information is coded. Language-like or picture-like? \\
+\bb{Content} & The MEANING of what is stored --- what the representation is about. \\
+\bb{Propositional (Description)} & Language-like, abstract code. Example: ON(BALL, BOX) means ``a ball is on a box.'' Has syntax, relations, arguments. Does not occur in spatial medium. \\
+\bb{Quasi-Pictorial (Depiction)} & Picture-like, concrete code. Uses resemblance to convey meaning. Occurs in spatial medium. Example: a mental image of a ball sitting on a box. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Processes and Algorithms}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cOrange}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Process} & A rule-based transformation: given a specific input, it produces a specific output. Like a function in mathematics. \\
+\bb{Processing System} & A set of processes working together to accomplish a task --- like an assembly line where each station does one step to produce the final product. \\
+\bb{Algorithm} & A step-by-step guaranteed procedure: if you follow all steps correctly, you ALWAYS get the correct output. Like a recipe that never fails. \\
+\bb{Identifiability} & The challenge of specifying the correct combination of representations and processes used for a task. Brain data helps solve this by ruling out competing theories. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cOrangeT}{cOrange}
+\bb{Analogy:} Two GPS routes both take you to the same destination. You cannot tell which route was taken just by arriving --- you need to watch the GPS screen (the brain) to see which path was actually followed. Brain imaging is like watching the GPS screen.
+\end{hintbox}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cGreen}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 5 --- PARADIGMS OF COGNITIVE PSYCHOLOGY: The Four Modern Frameworks}}}
+
+A paradigm is a shared framework --- a set of assumptions, research methods, and questions that guide a scientific community.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{2.8cm}|L{4.5cm}|L{4.2cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Paradigm} & \color{white}\bb{Core Analogy} & \color{white}\bb{What It Says} & \color{white}\bb{Where It Applies} \\
+\hline
+\bb{Information Processing} & Mind is like a computer & Information flows through stages: sensory register $\to$ short-term $\to$ long-term memory. & Attention, memory, cognitive load, task performance \\
+\bb{Connectionism} & Mind is like a neural network & Cognition emerges from many simple units connected in parallel. No single controller. & Language learning, pattern recognition, PDP models \\
+\bb{Evolutionary} & Mind was shaped by survival & We have specialized cognitive modules built by natural selection over millions of years. & Face recognition, fear responses, language acquisition \\
+\bb{Ecological} & Mind is shaped by environment & Cognition depends on real-world context and culture --- cannot be understood in isolation. & Everyday decisions, cultural differences in cognition \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Information Processing Approach}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Sensory Register} & Very brief holding area for raw sensory input. Visual = iconic memory; Auditory = echoic memory. Lasts less than a second. \\
+\bb{Short-Term Memory} & Conscious working memory. Limited capacity ($\sim$7 items). Information decays quickly unless rehearsed. Like your mental notepad. \\
+\bb{Long-Term Memory} & Permanent storage with virtually unlimited capacity. Information is stored through recoding and reorganization. Like a hard drive. \\
+\bb{Limited Capacity} & Humans can only do so many things at once. Attention, working memory, and processing are finite resources --- like RAM in a computer that can run out. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Connectionism (Parallel Distributed Processing)}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Simple Processing Units} & Each unit is like a single neuron --- receives input, does a tiny calculation, passes output. Individually weak, collectively very powerful. \\
+\bb{Parallel Processing} & All units work at the same time --- contrast with the serial, step-by-step stages of the information-processing model. \\
+\bb{Connection Weights} & Strength of each link determines which patterns are recognized. Learning = adjusting these weights based on experience. \\
+\bb{No Central Processor} & No single ``boss'' unit. Intelligence is distributed across the whole network --- more like a team than a hierarchy. \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{warnbox}
+\bb{Exam Trap:} ``What is a basic assumption of connectionism?'' Answer = Networks of connections among SIMPLE PROCESSING UNITS (NOT serial processing, NOT a central processor). Connectionism uses parallel, distributed networks --- the opposite of a single controller.
+\end{warnbox}
+
+\subsection*{Ecological Approach and Ecological Validity}
+
+\begin{hintbox}{cGreenT}{cGreen}
+\bb{Ecological Validity:} The degree to which research findings generalize to real-world settings. High = the study resembles real life. Low = artificial lab conditions that do not match everyday experience. Do NOT confuse with \textit{internal validity} (whether the study measures what it claims to measure).
+\end{hintbox}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cRed}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 6 --- RESEARCH METHODS: Behavioral Measures}}}
+
+Cognitive psychologists cannot directly observe the mind --- so they infer what is happening inside by carefully measuring behavior.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{3.5cm}|L{3.8cm}|L{5.1cm}|}
+\hline
+\rowcolor{cRed}\color{white}\bb{Method} & \color{white}\bb{Everyday Example} & \color{white}\bb{Why It Is Useful} & \color{white}\bb{Limitations to Watch For} \\
+\hline
+\bb{Accuracy (\% correct / \% error)} & Memory recall test --- how many words do you remember? & Objective measure of whether processing worked correctly & Ceiling effects (too easy); floor effects (too hard); speed-accuracy trade-off \\
+\bb{Response Time} & How fast do you answer ``Is this word familiar?'' & Can detect unconscious processing --- slower for certain types even when correct & Sensitive to experimental expectations and task demands; speed-accuracy trade-off \\
+\bb{Judgments} & Rate how confident you felt on a 1--7 scale & Captures subjective reactions; cheap and easy to collect & Participant may not know how to use the scale; may not be honest \\
+\bb{Protocol Collection (think-aloud)} & Talking through pros and cons of a job decision out loud & Can reveal the sequence of processing steps & Cannot be used for most cognitive processes, which occur unconsciously in milliseconds \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{hintbox}{cRedT}{cRed}
+\bb{Speed-Accuracy Trade-off:} Go faster = make more mistakes. Slow down = fewer mistakes. A fast response might mean fast processing OR simply careless responding. Always check both speed AND accuracy.
+\end{hintbox}
+
+\subsection*{Associations and Dissociations}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cRed}\color{white}\bb{Term} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Association} & Two cognitive abilities always found together --- suggesting they share the same mental system. \\
+\bb{Dissociation} & Two abilities that can be damaged independently --- suggesting they use \textit{different} mental systems. Evidence for separate cognitive modules. \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cIndigo}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries SECTION 7 --- NEURAL METHODS \& MODELING: Beyond Behavior}}}
+
+\begin{warnbox}
+\bb{Exam Trap:} Just because brain area X is active when you do task Y does NOT mean X causes Y. Correlational imaging shows ASSOCIATION only. Only causal methods (TMS, lesion studies, drugs) can establish CAUSATION.
+\end{warnbox}
+
+\subsection*{Correlational Neural Methods}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{2.8cm}|L{3cm}|L{2.4cm}|L{2.4cm}|L{1.8cm}|L{2.8cm}|}
+\hline
+\rowcolor{cIndigo}\color{white}\bb{Method} & \color{white}\bb{Detects} & \color{white}\bb{Time Res.} & \color{white}\bb{Space Res.} & \color{white}\bb{Invasive?} & \color{white}\bb{Cost} \\
+\hline
+\bb{EEG / ERP} & Sleep stages, novel stimuli & Excellent (ms) & Poor ($\sim$1 inch) & Low & Low \\
+\bb{MEG} & Auditory cortex response to pitches & Excellent (ms) & Good ($<$1 cm) & Low & High \\
+\bb{PET} & Language areas while speaking & Poor (40 sec/image) & Good ($\sim$1 cm) & High (radiation) & Very high \\
+\bb{fMRI / MRI} & Brain activity and structure & Several seconds & Superb ($\sim$0.5 mm) & Low & High \\
+\bb{Optical Imaging} & Activity, same as PET & Several minutes & Poor ($\sim$2 cm) & Medium & Low \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Causal Neural Methods}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{4.2cm}|L{4.2cm}|L{3.8cm}|}
+\hline
+\rowcolor{cIndigo}\color{white}\bb{Method} & \color{white}\bb{How It Works} & \color{white}\bb{Advantage} & \color{white}\bb{Limitation} \\
+\hline
+\bb{Neuropsychological Studies} & Study patients with localized brain damage. Compare deficits to healthy controls. & Tests causal role of specific brain areas; inexpensive to collect. & Damage rarely limited to one area; patients may have many simultaneous deficits. \\
+\bb{TMS} & Magnetic pulses temporarily disrupt a brain surface area. Participant tested before and after. & Creates a reversible ``lesion''; cleaner than natural damage. & Only works near skull surface ($\sim$1 inch deep). \\
+\bb{Drugs (brain-specific)} & Disrupt specific neurotransmitter systems and test effects. & Reversible; can alter processing of specific brain systems. & Drugs often affect many brain systems; poor temporal resolution. \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Modeling: Two Types}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cIndigo}\color{white}\bb{Type} & \color{white}\bb{What It Means (Plain English)} \\
+\hline
+\bb{Process Model} & Describes the mind as a flowchart: Input $\to$ Encode $\to$ Compare $\to$ Decide $\to$ Respond. Each stage converts one representation into the next. \\
+\bb{Neural Network Model} & A set of interconnected units (each mimicking a neuron group). Input layer $\to$ Hidden layer(s) $\to$ Output layer. Learning = adjusting connection weights based on feedback. \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cSlate}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries KEY PEOPLE TIMELINE}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{1.8cm}|L{3.2cm}|L{7.2cm}|}
+\hline
+\rowcolor{cSlate}\color{white}\bb{Person} & \color{white}\bb{Dates} & \color{white}\bb{School} & \color{white}\bb{Key Contribution} \\
+\hline
+Aristotle & c.\ 350 BCE & Empiricism & Mind shaped by experience; early ideas on memory and association \\
+Plato & c.\ 400 BCE & Nativism & Some knowledge is innate; rational forms exist before experience \\
+John Locke & 1632--1704 & Empiricism & ``Blank slate'' (tabula rasa) --- mind is empty at birth; all ideas come from senses \\
+Descartes & 1596--1650 & Nativism & Mind and body are separate (dualism); some ideas are innate \\
+Wilhelm Wundt & 1832--1920 & Structuralism & Founded first psychology lab in Leipzig (1879); used introspection \\
+William James & 1842--1910 & Functionalism & Mind serves adaptive purposes; Darwin-inspired; studied real-world behavior \\
+Clark Hull & 1884--1952 & Behaviorism & Allowed inferred internal states (motivation) tied to observable behavior \\
+B.F.\ Skinner & 1904--1990 & Behaviorism & Rejected all internal mental events; operant conditioning \\
+Noam Chomsky & b.\ 1928 & Cognitive Revolution & Language has innate grammatical structure; critique of Skinner (1957) catalyzed revolution \\
+Herbert Simon & 1916--2001 & Cognitive Revolution & Modeled problem-solving as computer programs; information processing theory \\
+Alan Newell & 1927--1992 & Cognitive Revolution & With Simon, developed General Problem Solver; rule-based models \\
+George Miller & 1920--2012 & Information Processing & ``The Magical Number Seven'' (1956) --- working memory holds $\sim$7 $\pm$2 items \\
+Jean Piaget & 1896--1980 & Developmental & Genetic epistemology --- 4 stages of cognitive development \\
+Ulric Neisser & 1928--2012 & Cognitive Psychology & Wrote first cognitive psychology textbook (1967); defined the field \\
+\hline
+\end{tabular}
+\end{center}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cTeal}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries EXAM Q\&A --- 16 Questions in Cover-and-Recall Format}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|L{5.5cm}|L{9.7cm}|}
+\hline
+\rowcolor{cTeal}\color{white}\bb{Question} & \color{white}\bb{Answer} \\
+\hline
+What year did Wundt open the first psychology lab and what was his school called? & 1879, Leipzig, Germany. School = Structuralism. Used introspection to break conscious experience into basic elements. \\
+Core difference between Structuralism and Functionalism? & Structuralism: WHAT is the mind made of (parts). Functionalism: WHY does the mind work that way (purpose). Wundt = structure; James = function. \\
+Why did Behaviorism ultimately fail? & Could not explain language. Chomsky (1957) showed children acquire grammar rules never explicitly taught --- the mind must have internal structure. \\
+What analogy was central to the Cognitive Revolution? & The COMPUTER. Mental processes = software; brain = hardware. Allowed internal processes to be modeled and tested scientifically. \\
+What is the ``identifiability problem'' and how does brain research help? & Multiple theories may predict the same observable behavior. Brain data identifies which specific combination of representations and processes is actually being used. \\
+Distinguish ``description'' vs ``depiction'' as types of mental representations. & Description = language-like, abstract, propositional (e.g., ON(BALL, BOX)). Depiction = picture-like, spatial, uses resemblance (e.g., mental image of ball on box). \\
+Name the four paradigms of cognitive psychology. & (1) Information Processing. (2) Connectionism. (3) Evolutionary. (4) Ecological. \\
+What does ``limited capacity processor'' mean? & Humans can only handle a finite amount of information at once. Attention, working memory, and processing are limited resources. \\
+What is ecological validity? & How well research findings generalize to real-world situations. High = realistic. Low = artificial lab task. \\
+What is the basic assumption of the connectionist approach? & Cognition emerges from NETWORKS OF SIMPLE INTERCONNECTED PROCESSING UNITS working in parallel. No central processor. \\
+Difference between correlational and causal neural methods? & Correlational (fMRI, EEG) show which brain areas are ACTIVE but do not prove causation. Causal (TMS, lesion studies) show which areas are NECESSARY. \\
+What is the speed-accuracy trade-off? & Going faster increases errors; slowing down improves accuracy. A fast response might mean fast processing OR careless responding. \\
+What is genetic epistemology and who developed it? & Jean Piaget. The study of how knowledge structures develop through stages of childhood. \\
+What is a ``process'' in cognitive psychology? & A rule-based transformation: given a specific input representation it produces a specific output. \\
+What is TMS and what is its main limitation? & Transcranial Magnetic Stimulation --- magnetic pulses temporarily disrupt a brain area. Limitation: only reaches areas near the skull surface ($\sim$1 inch deep). \\
+Difference between ``recognition'' and ``recall''? & Recognition = identifying something when a CUE is present (face is in front of you). Recall = retrieving information WITHOUT a cue present. Recognition is generally easier. \\
+\hline
+\end{tabular}
+\end{center}
+
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cBlue}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries ONE-PAGE CHEAT SHEET}}}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{3cm}|L{12.2cm}|}
+\hline
+\rowcolor{cBlue}\color{white}\bb{Topic} & \color{white}\bb{What to Remember (Plain Words)} \\
+\hline
+\bb{Empiricism vs Nativism} & Empiricists: experience shapes the mind (Locke, Aristotle). Nativists: biology decides (Plato, Descartes). Both views are alive in modern cognitive psychology. \\
+\bb{Wundt 1879} & Father of scientific psychology. First lab in Leipzig. Structuralism = break the mind into parts via introspection. \\
+\bb{William James} & Functionalism. WHY does the mind work that way? Darwin-inspired focus on adaptive purpose. Real-world over sterile labs. \\
+\bb{Gestalt} & Whole is greater than parts. Brain perceives complete patterns, not just isolated pieces. \\
+\bb{Behaviorism} & Only study observable behavior. Skinner rejected all internal events. Failed on language (Chomsky). \\
+\bb{Cognitive Revolution} & 1950s--60s. Computer metaphor unlocked the black box. Key players: Chomsky, Simon, Newell, Miller. \\
+\bb{Mental Representation} & Internal code in the brain. Two aspects: FORM (how coded) + CONTENT (what it means). \\
+\bb{Description vs Depiction} & Description = language-like, abstract. Depiction = picture-like, spatial, uses resemblance. \\
+\bb{Process / Algorithm} & Process = rule-based transformation. Algorithm = guaranteed step-by-step procedure for a correct output. \\
+\bb{Limited Capacity} & We can only process so much at once. Like a CPU with limited RAM. \\
+\bb{Information Processing} & Sensory Register $\to$ Short-Term Memory $\to$ Long-Term Memory. Computer-like sequential stages. \\
+\bb{Connectionism} & No central processor. Networks of simple units in parallel. Distributed intelligence like neurons. \\
+\bb{Evolutionary Approach} & Specialized cognitive modules shaped by natural selection. Not a general-purpose machine. \\
+\bb{Ecological Approach} & Cognition is shaped by culture and context. Study it in real life, not just artificial labs. \\
+\bb{Ecological Validity} & Do results apply to real life? High = realistic. Low = artificial lab task. Not the same as internal validity. \\
+\bb{Behavioral Methods} & Accuracy, Response Time, Judgments, Protocol Collection. Each has specific advantages and limitations. \\
+\bb{Correlational Imaging} & fMRI, EEG, PET, MEG show brain activity. Correlation does NOT equal causation! \\
+\bb{Causal Neural Methods} & Lesion studies, TMS, drugs. Show a brain area is NECESSARY --- disrupting it changes behavior. \\
+\bb{Identifiability} & Brain data helps choose between competing theories that all predict the same behavioral outcome. \\
+\bb{Piaget} & Genetic epistemology. Four cognitive development stages from infant through adolescence. \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+%% ════════════════════════════════════════════════════════════
+\section*{\colorbox{cGreen}{\parbox{\dimexpr\linewidth-2\fboxsep}{\color{white}\bfseries ASSIGNMENT 1 --- Full Solutions with Explanations}}}
+
+\subsubsection*{Question 1}
+\textit{The school of psychology known as functionalism was founded by:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Wilhelm Wundt \\
+& B.\ John Watson \\
+\rowcolor{cGreenHL} & \textbf{C.\ William James \checkmark} \\
+& D.\ Edward Titchener \\
+\end{tabular}
+
+\begin{assignbox}{}
+William James founded functionalism --- he focused on the PURPOSE and adaptive function of mental processes, directly inspired by Darwin's theory of evolution.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Wundt) founded STRUCTURALISM (breaking the mind into parts). B (Watson) was a behaviourist who rejected internal states entirely. D (Titchener) was Wundt's student and also a structuralist.}
+
+\subsubsection*{Question 2}
+\textit{The fact that you know you have seen the face before but cannot remember the name of the person, illustrates the cognitive process of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Perception \\
+& B.\ Attention \\
+\rowcolor{cGreenHL} & \textbf{C.\ Recognition \checkmark} \\
+& D.\ Recall \\
+\end{tabular}
+
+\begin{assignbox}{}
+Recognition = identifying something previously encountered when a CUE is present (the face is in front of you). The name cannot be retrieved, but the face triggers familiarity.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Perception) is about processing current sensory input. B (Attention) is about focusing cognitive resources. D (Recall) requires retrieving information WITHOUT a cue present.}
+
+\subsubsection*{Question 3}
+\textit{The term \_\_\_\_\_ refers to the relevance of the research to the ``real world.''}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Internal validity \\
+& B.\ Evolutionary validity \\
+\rowcolor{cGreenHL} & \textbf{C.\ Ecological validity \checkmark} \\
+& D.\ Neural validity \\
+\end{tabular}
+
+\begin{assignbox}{}
+Ecological validity = how well research findings generalize to real-world, everyday situations outside the laboratory.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Internal validity) refers to whether a study correctly measures what it claims to measure --- NOT about real-world generalization. B and D are not standard psychological validity concepts.}
+
+\subsubsection*{Question 4}
+\textit{\_\_\_\_\_ challenged the assumption that mental events were beyond the realm of scientific study.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+\rowcolor{cGreenHL} & \textbf{A.\ Cognitive revolution \checkmark} \\
+& B.\ Behaviorist rebellion \\
+& C.\ Human factor movements \\
+& D.\ Universal grammar \\
+\end{tabular}
+
+\begin{assignbox}{}
+The cognitive revolution (1950s--60s) directly challenged behaviorism's dismissal of internal mental events, re-establishing the scientific legitimacy of studying memory, attention, language, and problem-solving.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: B (Behaviorist rebellion) is the OPPOSITE --- behaviorists DENIED mental events should be studied. C (Human factors) deals with ergonomics. D (Universal grammar) is Chomsky's specific theory, a contribution TO the revolution, not the revolution itself.}
+
+\subsubsection*{Question 5}
+\textit{Since the 1970s, various techniques of \_\_\_\_\_ have allowed us to construct pictures of the anatomy and functioning of intact brains.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Genetic engineering \\
+\rowcolor{cGreenHL} & \textbf{B.\ Brain imaging \checkmark} \\
+& C.\ Neurosurgery \\
+& D.\ Brain lesioning \\
+\end{tabular}
+
+\begin{assignbox}{}
+Brain imaging techniques (CT, PET, fMRI, EEG) developed since the 1970s allow NON-INVASIVE examination of both brain structure and function in intact, living brains.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Genetic engineering) manipulates DNA. C (Neurosurgery) is invasive. D (Brain lesioning) involves deliberate damage --- it is a causal method, not a way to construct pictures of an intact brain.}
+
+\subsubsection*{Question 6}
+\textit{Historians date the founding of scientific psychology to the 1879 laboratory of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ William James \\
+\rowcolor{cGreenHL} & \textbf{B.\ Wilhelm Wundt \checkmark} \\
+& C.\ John Locke \\
+& D.\ Edward Titchener \\
+\end{tabular}
+
+\begin{assignbox}{}
+Wilhelm Wundt established the first experimental psychology laboratory in Leipzig, Germany in 1879 --- the official birth of psychology as a distinct science.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (James) worked around the same time but never established a formal research lab. C (Locke) was a 17th-century philosopher. D (Titchener) was Wundt's student who came AFTER Wundt.}
+
+\subsubsection*{Question 7}
+\textit{The term ``limited capacity processors'' suggests that:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Humans have limited memory storage \\
+\rowcolor{cGreenHL} & \textbf{B.\ Human beings can only do so many things at once \checkmark} \\
+& C.\ Neurons can only fire at a certain rate \\
+& D.\ Processing in the brain occurs in parallel \\
+\end{tabular}
+
+\begin{assignbox}{}
+Limited capacity processors means human cognitive resources --- attention, working memory, and processing --- are FINITE. We cannot attend to everything or process unlimited tasks simultaneously.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A is about memory storage specifically --- limited capacity is broader. C is about neural biology. D (parallel processing) is the OPPOSITE --- it implies less limitation, not more.}
+
+\subsubsection*{Question 8}
+\textit{This psychologist sought to describe intellectual structures underlying cognitive experience at different developmental points through an approach he called genetic epistemology:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Galton \\
+& B.\ Skinner \\
+& C.\ Wundt \\
+\rowcolor{cGreenHL} & \textbf{D.\ Piaget \checkmark} \\
+\end{tabular}
+
+\begin{assignbox}{}
+Jean Piaget developed genetic epistemology --- the study of how knowledge structures develop through stages of childhood: sensorimotor, preoperational, concrete operational, formal operational.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Galton) studied individual differences and inherited intelligence. B (Skinner) was a behaviourist who rejected internal cognitive structures. C (Wundt) was a structuralist focused on adult conscious experience.}
+
+\subsubsection*{Question 9}
+\textit{Clinical interviews are to introspection as \_\_\_\_\_ are to \_\_\_\_\_.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Naturalistic observations; experiments \\
+& B.\ Naturalistic observations; quasi experiments \\
+\rowcolor{cGreenHL} & \textbf{C.\ Controlled observations; naturalistic observations \checkmark} \\
+& D.\ Controlled observations; experiments \\
+\end{tabular}
+
+\begin{assignbox}{}
+Clinical interviews are a STRUCTURED/CONTROLLED version of introspection. Controlled observations are a STRUCTURED version of naturalistic observations. The analogy: both clinical interviews and controlled observations add rigour to a more free-form method.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A and B incorrectly pair naturalistic observations with introspection --- naturalistic is UNCONTROLLED, but clinical interviews are CONTROLLED. D pairs ``controlled'' with ``experiments,'' breaking the analogy.}
+
+\subsubsection*{Question 10}
+\textit{Which of the following is a basic assumption of the connectionist approach?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Serial processing \\
+& B.\ Multiple stores where information is kept throughout processing \\
+\rowcolor{cGreenHL} & \textbf{C.\ Networks of connections among simple processing units \checkmark} \\
+& D.\ A central processor that directs the flow of information \\
+\end{tabular}
+
+\begin{assignbox}{}
+Connectionism specifically assumes cognition emerges from NETWORKS OF SIMPLE INTERCONNECTED UNITS working in PARALLEL. This is its defining and distinguishing feature.
+\end{assignbox}
+{\small\itshape\color{cGreen} Why the others are wrong: A (Serial processing) is the assumption of classical information processing models --- connectionism uses PARALLEL processing. B (Multiple stores) describes the information processing model's memory architecture. D (Central processor) is the OPPOSITE of connectionism.}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{5.5cm}|L{8.9cm}|}
+\hline
+\rowcolor{cGreen}\color{white}\bb{Q\#} & \color{white}\bb{Topic} & \color{white}\bb{Correct Answer} \\
+\hline
+1 & Founding of Functionalism & C --- William James \\
+2 & Recognition vs Recall & C --- Recognition \\
+3 & Research Validity Term & C --- Ecological Validity \\
+4 & Challenging Behaviorism & A --- Cognitive Revolution \\
+5 & Brain Study Techniques & B --- Brain Imaging \\
+6 & Birth of Scientific Psychology & B --- Wilhelm Wundt (1879) \\
+7 & Limited Capacity Processors & B --- Can only do so many things at once \\
+8 & Genetic Epistemology & D --- Piaget \\
+9 & Research Methods Analogy & C --- Controlled; Naturalistic Observations \\
+10 & Connectionist Approach & C --- Networks of simple processing units \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\color{cSlate}\textit{Reference: Cognitive Psychology: In and Out of the Laboratory --- Kathleen M.\ Galotti, Chapter 1}}
+
+\end{document}
