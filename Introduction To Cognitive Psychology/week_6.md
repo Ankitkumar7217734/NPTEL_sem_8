@@ -1,8 +1,51 @@
+<style>
+  /* ── Always applied (preview + print) ─────────────────── */
+  .question {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ccc;
+  }
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  /* ── Only applied when printing / exporting to PDF ─────── */
+  @media print {
+    body, p, li, td, th, blockquote {
+      font-family: "Times New Roman", Times, serif;
+      color: #000000 !important;
+      background: #ffffff !important;
+    }
+    h1, h2, h3, h4 {
+      font-family: "Times New Roman", Times, serif;
+      color: #003399 !important;
+    }
+    table {
+      font-family: "Times New Roman", Times, serif;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #003399;
+      padding: 6px 10px;
+      color: #000000 !important;
+    }
+    th {
+      background-color: #003399 !important;
+      color: #ffffff !important;
+    }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 6: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -19,7 +62,11 @@
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 2
 
@@ -36,7 +83,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 3
 
@@ -53,7 +104,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 4
 
@@ -70,7 +125,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 5
 
@@ -87,7 +146,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -104,7 +167,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -121,7 +188,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -138,11 +209,15 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 9
 
-**"Characteristic features" and "family resemblance" are important aspects of the \_\_\_\_\_\_\_\_\_ view of concepts.**
+**"Characteristic features" and "family resemblance" are important aspects of the \_\_\_\_\_\_\_\_ view of concepts.**
 
 - A. Classical
 - **B. Prototype ✅**
@@ -155,7 +230,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -171,6 +250,8 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 **Explanation:** This is a classic demonstration of **semantic priming** via **spreading activation**. When the word "bread" is processed, activation spreads through the semantic network to closely associated nodes — and "butter" is one of the strongest associates of "bread" (they frequently co-occur and are semantically/functionally related). This pre-activation lowers the threshold for recognizing "butter" as a real word, resulting in a **faster lexical decision**. The other options ("rencle" is a non-word, "dog" and "island" are semantically unrelated) would produce no such priming benefit.
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Processes: Semantic Memory)_
+
+</div>
 
 ---
 
