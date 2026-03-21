@@ -176,18 +176,18 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 ## Summary Table
 
-| Q#  | Topic                           | Correct Answer        |
-| :-: | ------------------------------- | --------------------- |
-|  1  | LTM Properties (NOT acoustic)   | C — Acoustic coding   |
-|  2  | LTM Capacity                    | A — Unlimited         |
-|  3  | Semantic Confusion in LTM       | D — "big" and "large" |
-|  4  | LTM Coding Format               | C — Meaning           |
-|  5  | Procedural Memory               | D — Procedural        |
-|  6  | Cue Overload Principle          | A — Cue overload      |
-|  7  | Context/State-Dependent Effects | A — Recall tests only |
-|  8  | Bahrick's Permastore Study      | D — Over 50 years     |
-|  9  | Mnemonics                       | A — Mnemonics         |
-| 10  | Episodic Memory                 | B — Episodic memory   |
+| Q# | Topic                           | Correct Answer         |
+| :-: | ------------------------------- | ---------------------- |
+| 1 | LTM Properties (NOT acoustic)   | C — Acoustic coding   |
+| 2 | LTM Capacity                    | A — Unlimited         |
+| 3 | Semantic Confusion in LTM       | D — "big" and "large" |
+| 4 | LTM Coding Format               | C — Meaning           |
+| 5 | Procedural Memory               | D — Procedural        |
+| 6 | Cue Overload Principle          | A — Cue overload      |
+| 7 | Context/State-Dependent Effects | A — Recall tests only |
+| 8 | Bahrick's Permastore Study      | D — Over 50 years     |
+| 9 | Mnemonics                       | A — Mnemonics         |
+| 10 | Episodic Memory                 | B — Episodic memory   |
 
 ---
 
