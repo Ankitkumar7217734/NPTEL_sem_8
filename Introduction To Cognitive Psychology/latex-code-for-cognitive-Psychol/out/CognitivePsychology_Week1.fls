@@ -2,7 +2,7 @@ PWD /Users/ankitkumar/Downloads/NPTEL_sem_8/Introduction To Cognitive Psychology
 INPUT /usr/local/texlive/2026basic/texmf.cnf
 INPUT /usr/local/texlive/2026basic/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2026basic/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT CognitivePsychology_Week1.tex
+INPUT /Users/ankitkumar/Downloads/NPTEL_sem_8/Introduction To Cognitive Psychology/latex-code-for-cognitive-Psychol/CognitivePsychology_Week1.tex
 OUTPUT out/CognitivePsychology_Week1.log
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/base/article.cls
@@ -158,18 +158,15 @@ INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2026basic/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT out/CognitivePsychology_Week1.aux
 INPUT out/CognitivePsychology_Week1.out
 INPUT out/CognitivePsychology_Week1.out
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
