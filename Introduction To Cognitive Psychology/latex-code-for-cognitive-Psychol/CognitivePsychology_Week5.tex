@@ -1,0 +1,254 @@
+%% ============================================================
+%% Introduction to Cognitive Psychology — Week 5 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Cognitive Psychology --- Week 5 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Introduction to Cognitive Psychology\par
+\vspace{0.2cm}
+\large Assignment 5 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 5 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{As classically conceived, long-term memory is held to have all of the following properties EXCEPT:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ It comprises a permanent or at least semipermanent store \\
+& B.\ It has virtually unlimited capacity \\
+& \textbf{C.\ It primarily uses acoustic coding \checkmark} \\
+& D.\ Information stored within it is not always easily accessible \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C — It primarily uses acoustic coding\\[0.2cm]
+\textbf{Why this answer:} \\
+Long-term memory does \textbf{not} primarily use acoustic (sound-based) coding. Unlike \textbf{short-term memory}, which relies heavily on \textbf{phonological/acoustic coding} (Conrad, 1964), long-term memory predominantly uses \textbf{semantic (meaning-based) coding}. The other three options are all valid properties of LTM: it serves as a relatively permanent store, it has virtually unlimited capacity, and stored information is not always easily accessible (retrieval failures can occur even when the memory exists).
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{Psychologists believe that the capacity of long-term memory is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Unlimited \checkmark} \\
+& B.\ 7 ± 2 items \\
+& C.\ 18 items \\
+& D.\ 5000 items \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A — Unlimited\\[0.2cm]
+\textbf{Why this answer:} \\
+The capacity of long-term memory is considered \textbf{virtually unlimited} — there is no known upper bound on the amount of information that can be stored. This stands in stark contrast to \textbf{short-term memory}, which has a limited capacity of approximately \textbf{7 ± 2 items} (Miller, 1956).
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{Which of the following are most likely to be confused in long-term memory?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ The letters P and R \\
+& B.\ The letters C and B \\
+& C.\ The words "see" and "bee" \\
+& \textbf{D.\ The words "big" and "large" \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D — The words "big" and "large"\\[0.2cm]
+\textbf{Why this answer:} \\
+Because long-term memory is organized primarily by \textbf{semantic (meaning-based) coding}, items that share similar meanings are most likely to be confused. "Big" and "large" are \textbf{synonyms} and are therefore easily confused in LTM. Acoustically similar items like "see" and "bee" cause confusion in \textbf{short-term memory} (where acoustic coding dominates) but not in long-term memory.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 4}
+\textit{The code in long-term memory is based on:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Sound \\
+& B.\ Visual imagery \\
+& \textbf{C.\ Meaning \checkmark} \\
+& D.\ Both sound and visual imagery \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C — Meaning\\[0.2cm]
+\textbf{Why this answer:} \\
+The dominant coding format in long-term memory is \textbf{semantic coding} — information is stored and organized based on its \textbf{meaning} rather than its sound or visual appearance. LTM errors tend to involve \textbf{semantically related items} (e.g., confusing synonyms) rather than acoustically or visually similar items.
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{Your memory for how to ride a bicycle is an example of \_\_ memory.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Explicit \\
+& B.\ Implicit \\
+& C.\ Declarative \\
+& \textbf{D.\ Procedural \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D — Procedural\\[0.2cm]
+\textbf{Why this answer:} \\
+Memory for \textbf{how to perform a skill} — such as riding a bicycle — is \textbf{procedural memory}. Procedural memory is a subtype of \textbf{implicit (nondeclarative) memory} that stores knowledge about motor skills, habits, and procedures. It is acquired through practice and repetition and is typically difficult to verbalize consciously.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{A retrieval cue will be most effective when it is highly distinctive or unusual, according to the principle of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Cue overload \checkmark} \\
+& B.\ Encoding specificity \\
+& C.\ Mood dependence \\
+& D.\ State dependence \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A — Cue overload\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{cue overload principle} (Watkins \& Watkins, 1975) states that the effectiveness of a retrieval cue decreases as the number of memories associated with that cue increases. A cue that is \textbf{highly distinctive or unusual} is associated with fewer memories, making it a more effective retrieval aid.
+\vspace{0.4cm}
+\newpage
+
+\subsubsection*{Question 7}
+\textit{Context effects and state-dependent learning effects occur:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ For recall tests only \checkmark} \\
+& B.\ For recognition tests only \\
+& C.\ For both recall and recognition \\
+& D.\ For paired associate tests only \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A — For recall tests only\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Context-dependent} and \textbf{state-dependent} memory effects are primarily observed in \textbf{recall tasks} but not in recognition tasks. \textbf{Recall} relies heavily on retrieval cues — and context or internal state at encoding serves as an important cue. \textbf{Recognition} provides the target item itself as a direct cue, making contextual cues less necessary.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{Bahrick's study of retention of Spanish vocabulary words showed that large portions of information remained in long-term memory for:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Several months \\
+& B.\ 1–2 years \\
+& C.\ Up to 5 years \\
+& \textbf{D.\ Over 50 years \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D — Over 50 years\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Harry Bahrick's} landmark study (1984) on very long-term memory (termed \textbf{"permastore"}) found that while there was significant forgetting during the first 3–6 years, a substantial portion of Spanish vocabulary remained stable and accessible for \textbf{over 50 years} with virtually no additional decline.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{Techniques designed to improve memory, often involving the use of visual imagery, are called:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Mnemonics \checkmark} \\
+& B.\ Eidetic \\
+& C.\ Iconic \\
+& D.\ IQ enhancers \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A — Mnemonics\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Mnemonics} are structured techniques designed to enhance encoding and retrieval of information. Many strategies rely on \textbf{visual imagery} — for example, the \textbf{method of loci}, the \textbf{peg-word system}, and \textbf{keyword methods}. "Eidetic" refers to photographic-like memory, "iconic" refers to visual sensory memory, and "IQ enhancers" is not a recognized psychological term.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{Your memory of your first college lecture would be an example of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Semantic memory \\
+& \textbf{B.\ Episodic memory \checkmark} \\
+& C.\ Implicit memory \\
+& D.\ Working memory \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B — Episodic memory\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Episodic memory} (Tulving, 1972) stores \textbf{personally experienced events} tied to a specific \textbf{time, place, and context.} Your memory of your first college lecture is a personal experience with a particular temporal and spatial context — making it a textbook example of episodic memory, distinct from semantic, implicit, or working memory.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & LTM Properties (NOT acoustic) & C — Acoustic coding \\
+2 & LTM Capacity & A — Unlimited \\
+3 & Semantic Confusion in LTM & D — "big" and "large" \\
+4 & LTM Coding Format & C — Meaning \\
+5 & Procedural Memory & D — Procedural \\
+6 & Cue Overload Principle & A — Cue overload \\
+7 & Context/State-Dependent Effects & A — Recall tests only \\
+8 & Bahrick's Permastore Study & D — Over 50 years \\
+9 & Mnemonics & A — Mnemonics \\
+10 & Episodic Memory & B — Episodic memory \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+\end{document}

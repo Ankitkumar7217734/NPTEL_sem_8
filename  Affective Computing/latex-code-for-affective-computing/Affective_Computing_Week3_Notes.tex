@@ -1,0 +1,255 @@
+%% ============================================================
+%% Affective Computing — Week 3 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 3 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 3\par
+\vspace{0.2cm}
+\large Assignment 3 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 3 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{Which type of emotional expression dataset is easiest to collect but suffers from low ecological validity?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Acted or posed expressions \checkmark} \\
+& B.\ Naturalistic expressions \\
+& C.\ Induced expressions \\
+& D.\ Behavioral manipulation datasets \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Acted or posed expressions\\[0.2cm]
+\textbf{Why this answer:} \\
+Acted or posed expression datasets are the easiest to collect because participants deliberately produce expressions on command. However, they suffer from \textbf{low ecological validity} because posed expressions often differ from genuine, spontaneous emotions in timing, intensity, and muscle activation patterns.
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{In emotion elicitation, which method involves observing film clips or images designed to evoke emotions?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Social interaction \\
+& \textbf{B.\ Passive/perception-based methods \checkmark} \\
+& C.\ Directed facial action tasks \\
+& D.\ Productive modality elicitation \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Passive/perception-based methods\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Passive or perception-based methods} involve presenting participants with stimuli such as film clips, images, or sounds designed to evoke emotional responses. The participant passively perceives the stimulus while their reactions (facial expressions, physiological signals) are recorded.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{A key disadvantage of using images for passive elicitation is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Setup is too complex \\
+& \textbf{B.\ Emotional reactions are short and transient \checkmark} \\
+& C.\ Images cannot be standardized \\
+& D.\ Images elicit too intense emotions \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Emotional reactions are short and transient\\[0.2cm]
+\textbf{Why this answer:} \\
+Images produce \textbf{brief, transient emotional reactions} because the exposure time is short and static stimuli lack the narrative progression of film clips. This makes it harder to capture sustained emotional responses or study dynamic changes in affect over time.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 4}
+\textit{Which passive method generally includes a neutral baseline clip before emotional clips?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Facial action tasks \\
+& B.\ Social interaction \\
+& \textbf{C.\ Film clip--based elicitation \checkmark} \\
+& D.\ Gesture-based elicitation \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Film clip--based elicitation\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Film clip--based elicitation} protocols typically include a \textbf{neutral baseline clip} shown before the emotional clips. This establishes a physiological and emotional baseline, allowing researchers to measure the change in affect produced by the target emotional stimulus relative to the neutral state.
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{Directed Facial Action Tasks are primarily used in:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Behavioral manipulation methods \checkmark} \\
+& B.\ Passive emotion elicitation \\
+& C.\ Baseline emotional calibration \\
+& D.\ IRB risk assessment \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Behavioral manipulation methods\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Directed Facial Action Tasks} fall under \textbf{behavioral manipulation methods}, where participants are instructed to contract specific facial muscles (based on FACS Action Units) to produce particular expressions. This approach manipulates behavior directly to study the relationship between facial muscle activity and emotional experience.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{One major advantage of social interaction--based elicitation is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ The emotions elicited are highly controllable \\
+& B.\ It is effective for collecting productive modalities \\
+& \textbf{C.\ Emotions produced are realistic and natural \checkmark} \\
+& D.\ Participants do not require instruction \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Emotions produced are realistic and natural\\[0.2cm]
+\textbf{Why this answer:} \\
+Social interaction--based elicitation produces emotions that are \textbf{realistic and natural} because they arise from genuine interpersonal dynamics rather than artificial stimuli. This gives the data high ecological validity, though the trade-off is reduced experimental control over which specific emotions are elicited.
+\vspace{0.4cm}
+
+\subsubsection*{Question 7}
+\textit{Which document is required when submitting a study for IRB review?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ A participant payment receipt \\
+& B.\ A full literature review \\
+& C.\ A published version of the experiment \\
+& \textbf{D.\ A copy of the informed consent form \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- A copy of the informed consent form\\[0.2cm]
+\textbf{Why this answer:} \\
+When submitting a study for \textbf{Institutional Review Board (IRB)} review, researchers must include a copy of the \textbf{informed consent form}. This document ensures participants are fully informed about the study's purpose, procedures, risks, benefits, and their right to withdraw, which is a fundamental ethical requirement.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{Which of the following is not a criterion for IRB approval?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Risks to subjects must be minimized \\
+& B.\ Adequate privacy and confidentiality protection \\
+& \textbf{C.\ Ensuring participants enjoy the experiment \checkmark} \\
+& D.\ Selection of subjects must be equitable \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Ensuring participants enjoy the experiment\\[0.2cm]
+\textbf{Why this answer:} \\
+IRB approval criteria include minimizing risks, ensuring equitable subject selection, obtaining informed consent, and protecting privacy and confidentiality. \textbf{Participant enjoyment} is not an IRB criterion --- research may involve discomfort or stress as long as risks are minimized and properly disclosed.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{Tools such as PsychoPy, OpenSesame, and SuperLab fall under which category?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Affect expression tools \\
+& \textbf{B.\ Data collection tools \checkmark} \\
+& C.\ Data mining tools \\
+& D.\ Annotation tools \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Data collection tools\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{PsychoPy}, \textbf{OpenSesame}, and \textbf{SuperLab} are \textbf{data collection tools} used to design and run experimental paradigms. They allow researchers to present stimuli (images, sounds, videos), record participant responses (reaction times, key presses), and synchronize with physiological recording equipment.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{SAM (Self-Assessment Manikin) is primarily used for:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Image labeling \\
+& B.\ Physiological signal cleaning \\
+& C.\ Facial expression synthesis \\
+& \textbf{D.\ Measuring emotional responses along dimensions like valence and arousal \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Measuring emotional responses along dimensions like valence and arousal\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{Self-Assessment Manikin (SAM)}, developed by Bradley and Lang, is a non-verbal pictorial scale used to measure \textbf{self-reported emotional responses} along the dimensions of \textbf{valence} (pleasant--unpleasant), \textbf{arousal} (calm--excited), and \textbf{dominance} (in control--submissive). It is widely used in affective computing and psychology research.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & Expression Dataset Types & A --- Acted/posed (low ecological validity) \\
+2 & Passive Elicitation Methods & B --- Passive/perception-based methods \\
+3 & Image Elicitation Disadvantage & B --- Reactions are short and transient \\
+4 & Neutral Baseline in Elicitation & C --- Film clip--based elicitation \\
+5 & Directed Facial Action Tasks & A --- Behavioral manipulation methods \\
+6 & Social Interaction Advantage & C --- Realistic and natural emotions \\
+7 & IRB Submission Requirements & D --- Informed consent form \\
+8 & IRB Approval Criteria & C --- Participant enjoyment \\
+9 & PsychoPy, OpenSesame, SuperLab & B --- Data collection tools \\
+10 & SAM (Self-Assessment Manikin) & D --- Valence and arousal measurement \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 3 Lecture Materials}}
+
+\end{document}

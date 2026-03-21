@@ -1,8 +1,22 @@
+<style>
+  .question { page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.2em; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  @media print {
+    body, p, li, td, th, blockquote { font-family: "Times New Roman", Times, serif; color: #000000 !important; background: #ffffff !important; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; color: #003399 !important; }
+    table { font-family: "Times New Roman", Times, serif; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #003399; padding: 6px 10px; color: #000000 !important; }
+    th { background-color: #003399 !important; color: #ffffff !important; }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 4: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -19,7 +33,11 @@
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 2
 
@@ -36,7 +54,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 3
 
@@ -53,7 +75,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 4
 
@@ -70,7 +96,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 5
 
@@ -87,7 +117,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -104,7 +138,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -121,7 +159,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -138,7 +180,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 9
 
@@ -155,7 +201,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -171,6 +221,8 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
 **Explanation:** **Long-term potentiation (LTP)** is a neurophysiological process in which repeated stimulation of synapses leads to a **lasting strengthening of synaptic connections**. LTP is widely regarded as one of the primary neural mechanisms underlying **learning and memory formation**, particularly in the **hippocampus**. Disrupting LTP — through pharmacological agents, genetic manipulation, or lesions — interferes with the ability to form new memories and learn new information, confirming its critical role in memory consolidation.
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures)_
+
+</div>
 
 ---
 

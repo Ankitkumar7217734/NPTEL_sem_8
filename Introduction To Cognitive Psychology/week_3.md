@@ -1,8 +1,22 @@
+<style>
+  .question { page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.2em; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  @media print {
+    body, p, li, td, th, blockquote { font-family: "Times New Roman", Times, serif; color: #000000 !important; background: #ffffff !important; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; color: #003399 !important; }
+    table { font-family: "Times New Roman", Times, serif; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #003399; padding: 6px 10px; color: #000000 !important; }
+    th { background-color: #003399 !important; color: #ffffff !important; }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 3: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -19,11 +33,15 @@
 
 _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Paying Attention: Attenuation Theory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 2
 
-**The "cocktail party effect" refers to the fact that shadowing performance is disrupted when **\_\_\_** is embedded in the unattended message.**
+**The "cocktail party effect" refers to the fact that shadowing performance is disrupted when \_\_\_ is embedded in the unattended message.**
 
 - A. Backward speech
 - **B. The listener's name ✅**
@@ -36,7 +54,11 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Selective Attention & Cocktail Party Effect)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 3
 
@@ -53,11 +75,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Sele
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Attention, Capacity, and Mental Effort — Kahneman's Model)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 4
 
-**The word "cat" is **\_\_** by the phrase "The dog chased the…." That is, the word cat is especially ready to be recognized or attended to.**
+**The word "cat" is \_\_ by the phrase "The dog chased the…." That is, the word cat is especially ready to be recognized or attended to.**
 
 - A. Filtered
 - B. Attenuated
@@ -70,7 +96,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Atte
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Priming)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 5
 
@@ -87,7 +117,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Prim
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Selective Attention & Cocktail Party Effect)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -104,7 +138,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Sele
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Filter Theory)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -121,7 +159,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Filt
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Automatic versus Controlled Processing)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -138,7 +180,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Auto
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Spatial Attention & Visual Search)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 9
 
@@ -155,7 +201,11 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Spat
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: The Stroop Effect)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -171,6 +221,8 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: The 
 **Explanation:** Research on **divided attention** consistently demonstrates that true simultaneous processing of two demanding tasks is extremely rare. What feels like multitasking is typically **rapid task-switching** — alternating attention back and forth between tasks. Each switch incurs a **time cost** and a potential accuracy cost. Performance on both tasks declines as the demands of either individual task increase, reflecting the **limited capacity** of attentional resources.
 
 _(Ref: Galotti — Part II: Basic Cognitive Processes — Paying Attention: Divided Attention & Dual-Task Performance)_
+
+</div>
 
 ---
 

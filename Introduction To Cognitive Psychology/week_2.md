@@ -1,8 +1,22 @@
+<style>
+  .question { page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.2em; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  @media print {
+    body, p, li, td, th, blockquote { font-family: "Times New Roman", Times, serif; color: #000000 !important; background: #ffffff !important; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; color: #003399 !important; }
+    table { font-family: "Times New Roman", Times, serif; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #003399; padding: 6px 10px; color: #000000 !important; }
+    th { background-color: #003399 !important; color: #ffffff !important; }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 2: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -19,7 +33,11 @@
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 2
 
@@ -36,7 +54,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2, Visual Agnosia — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 3
 
@@ -53,7 +75,11 @@ _(Ref: Chapter 2, Visual Agnosia — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 4
 
@@ -70,7 +96,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 5
 
@@ -87,7 +117,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -104,7 +138,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -121,7 +159,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2, Direct Perception — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -138,11 +180,15 @@ _(Ref: Chapter 2, Direct Perception — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 9
 
-**\*\***\_\_\_\***\* are to visual perception what phonemes are to language, according to Biederman.**
+**\_\_\_ are to visual perception what phonemes are to language, according to Biederman.**
 
 - A. Receptors
 - B. Retinas
@@ -155,7 +201,11 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 
 _(Ref: Chapter 2 — Galotti, 2010)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -171,6 +221,8 @@ _(Ref: Chapter 2 — Galotti, 2010)_
 **Explanation:** **Reversible figures** (such as the Rubin vase/faces illusion) are governed by the principle of **figure-ground organization**. This Gestalt principle describes how perception alternates between two competing interpretations — what is seen as the _figure_ (the focal object) versus the _ground_ (the background). In reversible figures, the figure and ground swap, creating two distinct percepts from the same image.
 
 _(Ref: Chapter 2 — Galotti, 2010)_
+
+</div>
 
 ---
 

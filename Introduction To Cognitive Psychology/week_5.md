@@ -1,8 +1,22 @@
+<style>
+  .question { page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.2em; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  @media print {
+    body, p, li, td, th, blockquote { font-family: "Times New Roman", Times, serif; color: #000000 !important; background: #ffffff !important; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; color: #003399 !important; }
+    table { font-family: "Times New Roman", Times, serif; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #003399; padding: 6px 10px; color: #000000 !important; }
+    th { background-color: #003399 !important; color: #ffffff !important; }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 5: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -17,9 +31,13 @@
 
 **Explanation:** Long-term memory does **not** primarily use acoustic (sound-based) coding. Unlike **short-term memory**, which relies heavily on **phonological/acoustic coding** (Conrad, 1964), long-term memory predominantly uses **semantic (meaning-based) coding**. The other three options are all valid properties of LTM: it serves as a relatively permanent store, it has virtually unlimited capacity, and stored information is not always easily accessible (retrieval failures can occur even when the memory exists).
 
-_(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 2
 
@@ -32,11 +50,15 @@ _(Ref: Galotti — Cognitive Psychology: In and Out of the Laboratory, Part II: 
 
 **Answer: A — Unlimited**
 
-**Explanation:** The capacity of long-term memory is considered **virtually unlimited** — there is no known upper bound on the amount of information that can be stored. This stands in stark contrast to **short-term memory**, which has a limited capacity of approximately **7 ± 2 items** (Miller, 1956). The distinction in capacity is one of the key differences that supports the existence of separate memory systems.
+**Explanation:** The capacity of long-term memory is considered **virtually unlimited** — there is no known upper bound on the amount of information that can be stored. This stands in stark contrast to **short-term memory**, which has a limited capacity of approximately **7 ± 2 items** (Miller, 1956).
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 3
 
@@ -49,11 +71,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: D — The words "big" and "large"**
 
-**Explanation:** Because long-term memory is organized primarily by **semantic (meaning-based) coding**, items that share similar meanings are most likely to be confused. "Big" and "large" are **synonyms** and are therefore easily confused in LTM. In contrast, "see" and "bee" (options C) or letters like C and B (option B) are **acoustically similar**, which would cause confusion in **short-term memory** (where acoustic coding dominates) but not in long-term memory.
+**Explanation:** Because long-term memory is organized primarily by **semantic (meaning-based) coding**, items that share similar meanings are most likely to be confused. "Big" and "large" are **synonyms** and are therefore easily confused in LTM. Acoustically similar items like "see" and "bee" cause confusion in **short-term memory** (where acoustic coding dominates) but not in long-term memory.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 4
 
@@ -61,20 +87,24 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 - A. Sound
 - B. Visual imagery
-- C. **Meaning ✅**
+- **C. Meaning ✅**
 - D. Both sound and visual imagery
 
 **Answer: C — Meaning**
 
-**Explanation:** The dominant coding format in long-term memory is **semantic coding** — information is stored and organized based on its **meaning** rather than its sound or visual appearance. This was demonstrated by research showing that LTM errors tend to involve **semantically related items** (e.g., confusing synonyms) rather than acoustically or visually similar items. While visual imagery and sound can play supporting roles in LTM (e.g., dual coding theory), the primary code is meaning-based.
+**Explanation:** The dominant coding format in long-term memory is **semantic coding** — information is stored and organized based on its **meaning** rather than its sound or visual appearance. LTM errors tend to involve **semantically related items** (e.g., confusing synonyms) rather than acoustically or visually similar items.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
 
+<div class="question">
+
 ### Question 5
 
-**Your memory for how to ride a bicycle is an example of **\_\_** memory.**
+**Your memory for how to ride a bicycle is an example of \_\_ memory.**
 
 - A. Explicit
 - B. Implicit
@@ -83,11 +113,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: D — Procedural**
 
-**Explanation:** Memory for **how to perform a skill** — such as riding a bicycle, tying shoelaces, or typing — is **procedural memory**. Procedural memory is a subtype of **implicit (nondeclarative) memory** that stores knowledge about motor skills, habits, and procedures. It is acquired through practice and repetition and is typically difficult to verbalize or consciously articulate. While option B (implicit) is a broader category that includes procedural memory, **procedural** is the most specific and correct answer for a motor skill like bicycle riding.
+**Explanation:** Memory for **how to perform a skill** — such as riding a bicycle — is **procedural memory**. Procedural memory is a subtype of **implicit (nondeclarative) memory** that stores knowledge about motor skills, habits, and procedures. It is acquired through practice and repetition and is typically difficult to verbalize consciously.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -100,11 +134,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: A — Cue overload**
 
-**Explanation:** The **cue overload principle** (Watkins & Watkins, 1975) states that the effectiveness of a retrieval cue decreases as the number of memories associated with that cue increases. When a cue is linked to many different memories, it becomes **overloaded** and less effective at retrieving any single memory. Conversely, a cue that is **highly distinctive or unusual** is associated with fewer memories, making it a more effective retrieval aid. This is distinct from **encoding specificity** (which concerns the match between encoding and retrieval contexts).
+**Explanation:** The **cue overload principle** (Watkins & Watkins, 1975) states that the effectiveness of a retrieval cue decreases as the number of memories associated with that cue increases. A cue that is **highly distinctive or unusual** is associated with fewer memories, making it a more effective retrieval aid.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -117,11 +155,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: A — For recall tests only**
 
-**Explanation:** Research has shown that **context-dependent** and **state-dependent** memory effects are primarily observed in **recall tasks** but not in recognition tasks. This is because **recall** relies heavily on retrieval cues — and the environmental context or internal state at encoding serves as an important cue. When the retrieval context matches the encoding context, recall improves. **Recognition**, on the other hand, provides the target item itself as a direct cue, making contextual cues less necessary and reducing the influence of context and state on performance.
+**Explanation:** **Context-dependent** and **state-dependent** memory effects are primarily observed in **recall tasks** but not in recognition tasks. **Recall** relies heavily on retrieval cues — and context or internal state at encoding serves as an important cue. **Recognition** provides the target item itself as a direct cue, making contextual cues less necessary.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -134,11 +176,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: D — Over 50 years**
 
-**Explanation:** **Harry Bahrick's** landmark study (1984) on very long-term memory (which he termed **"permastore"**) examined retention of Spanish vocabulary among former students over periods ranging from 1 to 50+ years. He found that while there was significant forgetting during the first 3–6 years, a substantial portion of the learned vocabulary remained stable and accessible for **over 50 years** with virtually no additional decline. This demonstrated that some information, once consolidated into LTM, can persist in a remarkably durable **permastore** state.
+**Explanation:** **Harry Bahrick's** landmark study (1984) on very long-term memory (termed **"permastore"**) found that while there was significant forgetting during the first 3–6 years, a substantial portion of Spanish vocabulary remained stable and accessible for **over 50 years** with virtually no additional decline.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 9
 
@@ -151,11 +197,15 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: A — Mnemonics**
 
-**Explanation:** **Mnemonics** (from the Greek _mnemonikos_, meaning "of memory") are structured techniques designed to enhance encoding and retrieval of information. Many mnemonic strategies rely on **visual imagery** — for example, the **method of loci** (associating items with locations along a familiar route), the **peg-word system** (linking items to pre-memorized number–word pairs), and **keyword methods** (creating vivid mental images). Other options are incorrect: "eidetic" refers to photographic-like memory, "iconic" refers to visual sensory memory, and "IQ enhancers" is not a recognized psychological term.
+**Explanation:** **Mnemonics** are structured techniques designed to enhance encoding and retrieval of information. Many strategies rely on **visual imagery** — for example, the **method of loci**, the **peg-word system**, and **keyword methods**. "Eidetic" refers to photographic-like memory, "iconic" refers to visual sensory memory, and "IQ enhancers" is not a recognized psychological term.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -168,25 +218,27 @@ _(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Lon
 
 **Answer: B — Episodic memory**
 
-**Explanation:** **Episodic memory** (Tulving, 1972) is the subsystem of declarative (explicit) long-term memory that stores **personally experienced events** tied to a specific **time, place, and context.** Your memory of your first college lecture is a personal experience with a particular temporal and spatial context — making it a textbook example of episodic memory. This is distinct from **semantic memory** (general knowledge and facts not tied to a personal experience), **implicit memory** (unconscious memory for skills and procedures), and **working memory** (short-term active processing).
+**Explanation:** **Episodic memory** (Tulving, 1972) stores **personally experienced events** tied to a specific **time, place, and context.** Your memory of your first college lecture is a personal experience with a particular temporal and spatial context — making it a textbook example of episodic memory, distinct from semantic, implicit, or working memory.
 
-_(Ref: Galotti — Part II: Basic Cognitive Processes — Memory Structures: Long-Term Memory)_
+_(Ref: Galotti — Part II — Memory Structures: Long-Term Memory)_
+
+</div>
 
 ---
 
 ## Summary Table
 
-| Q# | Topic                           | Correct Answer         |
-| :-: | ------------------------------- | ---------------------- |
-| 1 | LTM Properties (NOT acoustic)   | C — Acoustic coding   |
-| 2 | LTM Capacity                    | A — Unlimited         |
-| 3 | Semantic Confusion in LTM       | D — "big" and "large" |
-| 4 | LTM Coding Format               | C — Meaning           |
-| 5 | Procedural Memory               | D — Procedural        |
-| 6 | Cue Overload Principle          | A — Cue overload      |
-| 7 | Context/State-Dependent Effects | A — Recall tests only |
-| 8 | Bahrick's Permastore Study      | D — Over 50 years     |
-| 9 | Mnemonics                       | A — Mnemonics         |
+| Q# | Topic                           | Correct Answer        |
+| :-: | ------------------------------- | --------------------- |
+| 1  | LTM Properties (NOT acoustic)   | C — Acoustic coding   |
+| 2  | LTM Capacity                    | A — Unlimited         |
+| 3  | Semantic Confusion in LTM       | D — "big" and "large" |
+| 4  | LTM Coding Format               | C — Meaning           |
+| 5  | Procedural Memory               | D — Procedural        |
+| 6  | Cue Overload Principle          | A — Cue overload      |
+| 7  | Context/State-Dependent Effects | A — Recall tests only |
+| 8  | Bahrick's Permastore Study      | D — Over 50 years     |
+| 9  | Mnemonics                       | A — Mnemonics         |
 | 10 | Episodic Memory                 | B — Episodic memory   |
 
 ---

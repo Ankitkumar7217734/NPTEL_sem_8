@@ -1,0 +1,253 @@
+%% ============================================================
+%% Affective Computing — Week 1 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 1 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 1\par
+\vspace{0.2cm}
+\large Assignment 1 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 1 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{What does affective computing primarily involve?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Systems that improve computer graphics \\
+& \textbf{B.\ Systems that sense, recognize, respond to, and influence emotions \checkmark} \\
+& C.\ Systems that optimize data storage \\
+& D.\ Systems that improve processor speed \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Systems that sense, recognize, respond to, and influence emotions\\[0.2cm]
+\textbf{Why this answer:} \\
+Affective computing, as defined by Rosalind Picard (1997), is the branch of computing that deals with designing systems capable of sensing, recognizing, responding to, and influencing human emotions. It bridges the gap between human affect and machine intelligence.
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{Which of the following is not a modality for affect sensing?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Facial activity \\
+& B.\ Textual analysis \\
+& \textbf{C.\ Temperature of the environment \checkmark} \\
+& D.\ Physiological signals \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Temperature of the environment\\[0.2cm]
+\textbf{Why this answer:} \\
+Affect sensing modalities include facial expressions, voice/speech, text, physiological signals (like EDA, heart rate), and body gestures. Environmental temperature is a physical property of the surroundings and is not used as a modality for sensing human emotions.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{According to Picard (1997), which of the following is not one of the three applications of affective computing?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Detection \\
+& B.\ Expression \\
+& \textbf{C.\ Prediction \checkmark} \\
+& D.\ Perception \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Prediction\\[0.2cm]
+\textbf{Why this answer:} \\
+Picard outlined three core applications of affective computing: \textbf{detection} (recognizing emotions), \textbf{expression} (conveying emotions), and \textbf{perception} (understanding and interpreting emotions). Prediction of future emotions is not one of the original three categories she described.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 4}
+\textit{The EngageMe system uses which data source to help teachers reflect on their classes?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ EEG readings from helmets \\
+& \textbf{B.\ Skin conductance and classroom video feeds \checkmark} \\
+& C.\ Social media activity \\
+& D.\ Voice recordings \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Skin conductance and classroom video feeds\\[0.2cm]
+\textbf{Why this answer:} \\
+The EngageMe system collects \textbf{skin conductance} data from students alongside \textbf{classroom video feeds} to provide teachers with objective feedback on student engagement levels, helping them reflect on and improve their teaching effectiveness.
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{Which application is designed to help individuals with Asperger syndrome or high-functioning autism?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ StartleMart \\
+& B.\ Subtle Stone \\
+& \textbf{C.\ SymTrend and Autism Track \checkmark} \\
+& D.\ MACH \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- SymTrend and Autism Track\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{SymTrend} and \textbf{Autism Track} are tools specifically designed to assist individuals with Asperger syndrome or high-functioning autism. They help track behavioural patterns, emotional states, and daily symptoms to support self-awareness and communication with caregivers.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{What is the purpose of the MACH system?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Neuromarketing research \\
+& \textbf{B.\ Automated conversation coaching for interviews \checkmark} \\
+& C.\ Stress detection in PTSD \\
+& D.\ Classroom emotion tracking \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Automated conversation coaching for interviews\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{MACH} (My Automated Conversation coacH) is a system that provides automated feedback on social interactions, specifically designed to help users practice and improve their \textbf{interview skills} through real-time analysis of facial expressions, speech, and body language.
+\vspace{0.4cm}
+
+\subsubsection*{Question 7}
+\textit{In UX design, what does usability mainly concern?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ How attractive the interface looks \\
+& \textbf{B.\ How easy the product is to use \checkmark} \\
+& C.\ How emotional the user feels \\
+& D.\ How fast the product can be developed \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- How easy the product is to use\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Usability} in UX design refers to how easily and efficiently a user can interact with a product to achieve their goals. It encompasses learnability, efficiency, memorability, error prevention, and user satisfaction --- focusing primarily on ease of use rather than aesthetics alone.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{What is a major problem with self-reported user testing (focus groups/surveys)?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Requires expensive hardware \\
+& \textbf{B.\ Participant bias and recall bias \checkmark} \\
+& C.\ Requires EEG equipment \\
+& D.\ Long training time for participants \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Participant bias and recall bias\\[0.2cm]
+\textbf{Why this answer:} \\
+Self-reported methods like focus groups and surveys suffer from \textbf{participant bias} (social desirability, conformity) and \textbf{recall bias} (inaccurate memory of past experiences). These subjective biases can distort results, making physiological and behavioural measures valuable complementary data sources.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{Which physiological signal is explicitly mentioned as part of affect sensing?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Heart rate variability \\
+& \textbf{B.\ Electrodermal activity (EDA) \checkmark} \\
+& C.\ Sleep cycles \\
+& D.\ Blood pressure \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Electrodermal activity (EDA)\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Electrodermal activity (EDA)}, also known as galvanic skin response, measures changes in skin conductance caused by sweat gland activity linked to emotional arousal. It is one of the most commonly used physiological signals in affective computing for detecting emotional states.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{Emotion recognition systems always rely on facial expressions and cannot use any other type of data.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ True \\
+& \textbf{B.\ False \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- False\\[0.2cm]
+\textbf{Why this answer:} \\
+Emotion recognition systems are \textbf{multimodal} --- they can use a variety of data sources beyond facial expressions, including speech/voice analysis, physiological signals (EDA, heart rate), text sentiment analysis, body posture, and gestures. Relying on multiple modalities improves accuracy and robustness.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & Definition of Affective Computing & B --- Sense, recognize, respond to... emotions \\
+2 & Affect Sensing Modalities & C --- Temperature of the environment \\
+3 & Picard's Three Applications & C --- Prediction (not one of the three) \\
+4 & EngageMe System & B --- Skin conductance and video feeds \\
+5 & Asperger/Autism Applications & C --- SymTrend and Autism Track \\
+6 & MACH System & B --- Automated conversation coaching \\
+7 & Usability in UX & B --- How easy the product is to use \\
+8 & Self-Reported Testing Problems & B --- Participant bias and recall bias \\
+9 & Physiological Signal for Affect & B --- Electrodermal activity (EDA) \\
+10 & Emotion Recognition --- Facial Only? & B --- False (Systems are Multimodal) \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 1 Lecture Materials}}
+
+\end{document}

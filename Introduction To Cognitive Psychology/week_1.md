@@ -1,8 +1,22 @@
+<style>
+  .question { page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.2em; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  @media print {
+    body, p, li, td, th, blockquote { font-family: "Times New Roman", Times, serif; color: #000000 !important; background: #ffffff !important; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; color: #003399 !important; }
+    table { font-family: "Times New Roman", Times, serif; width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #003399; padding: 6px 10px; color: #000000 !important; }
+    th { background-color: #003399 !important; color: #ffffff !important; }
+  }
+</style>
+
 # Introduction to Cognitive Psychology
 
 ## Assignment 1: Detailed Solution
 
 ---
+
+<div class="question">
 
 ### Question 1
 
@@ -21,7 +35,11 @@ _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — G
 
 > ⚠️ **Note on Answer Key:** The provided answer key lists "A," but the correct answer is **C (William James)**. Wilhelm Wundt (A) founded **structuralism**, not functionalism.
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 2
 
@@ -38,11 +56,15 @@ _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — G
 
 _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 3
 
-**The term \*\***\_\***\* refers to the relevance of the research to the "real world."**
+**The term \*\*\_\*\* refers to the relevance of the research to the "real world."**
 
 - A. Internal validity
 - B. Evolutionary validity
@@ -55,11 +77,15 @@ _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — G
 
 _(Ref: Chapter 1 – Paradigms of Cognitive Psychology (Ecological Approach) — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 4
 
-**\*\*\*\***\_\_\_**\*\*** challenged the assumption that mental events were beyond the realm of scientific study.\*\*
+**\_\_\_ challenged the assumption that mental events were beyond the realm of scientific study.**
 
 - **A. Cognitive revolution ✅**
 - B. Behaviorist rebellion
@@ -72,11 +98,15 @@ _(Ref: Chapter 1 – Paradigms of Cognitive Psychology (Ecological Approach) —
 
 _(Ref: Chapter 1 – The Cognitive Revolution — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 5
 
-**Since the 1970s, various techniques of \*\***\_\***\* have allowed us to construct pictures of the anatomy and functioning of intact brains.**
+**Since the 1970s, various techniques of \*\*\_\*\* have allowed us to construct pictures of the anatomy and functioning of intact brains.**
 
 - A. Genetic engineering
 - **B. Brain imaging ✅**
@@ -89,7 +119,11 @@ _(Ref: Chapter 1 – The Cognitive Revolution — Galotti)_
 
 _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 6
 
@@ -106,7 +140,11 @@ _(Ref: Chapter 1 – Cognitive Psychology: History, Methods, and Paradigms — G
 
 _(Ref: Chapter 1 – Structuralism — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 7
 
@@ -123,7 +161,11 @@ _(Ref: Chapter 1 – Structuralism — Galotti)_
 
 _(Ref: Chapter 1 – Information-Processing Approach — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 8
 
@@ -140,11 +182,15 @@ _(Ref: Chapter 1 – Information-Processing Approach — Galotti)_
 
 _(Ref: Chapter 1 – Genetic Epistemology — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 9
 
-**Clinical interviews are to introspection as **\_\_** are to **\_\_\_\_**.**
+**Clinical interviews are to introspection as \_\_ are to \_\_\_\_.**
 
 - A. Naturalistic observations; experiments
 - B. Naturalistic observations; quasi experiments
@@ -157,7 +203,11 @@ _(Ref: Chapter 1 – Genetic Epistemology — Galotti)_
 
 _(Ref: Chapter 1 – Research Methods in Cognitive Psychology — Galotti)_
 
+</div>
+
 ---
+
+<div class="question">
 
 ### Question 10
 
@@ -173,6 +223,8 @@ _(Ref: Chapter 1 – Research Methods in Cognitive Psychology — Galotti)_
 **Explanation:** The **connectionist (or parallel distributed processing) approach** assumes that cognition emerges from vast **networks of interconnected simple units** that process information simultaneously. This differs from the classical information-processing model, which assumes a central processor and serial processing. Connectionism draws inspiration from the neural architecture of the brain.
 
 _(Ref: Chapter 1 – Connectionist Approach — Galotti)_
+
+</div>
 
 ---
 

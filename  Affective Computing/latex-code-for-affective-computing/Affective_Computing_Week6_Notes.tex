@@ -1,0 +1,253 @@
+%% ============================================================
+%% Affective Computing — Week 6 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 6 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 6\par
+\vspace{0.2cm}
+\large Assignment 6 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 6 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{ANEW is a categorical lexicon used to label text with Ekman's six universal emotions.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ True \\
+& \textbf{B.\ False \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- False\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{ANEW (Affective Norms for English Words)} is a \textbf{dimensional} lexicon --- it rates words along three dimensions: \textbf{Valence} (pleasure--displeasure), \textbf{Arousal} (excited--calm), and \textbf{Dominance} (controlled--in-control), following the \textbf{VAD (Valence-Arousal-Dominance)} model. It is \textbf{not} a categorical lexicon tied to Ekman's six universal emotions. Categorical emotion lexicons include resources like the NRC Emotion Lexicon (EmoLex).
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{According to Poffenberger \& Barrows (1924), upward-moving lines tend to evoke which feeling?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Calmness \\
+& \textbf{B.\ Joy \checkmark} \\
+& C.\ Fear \\
+& D.\ Anger \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Joy\\[0.2cm]
+\textbf{Why this answer:} \\
+Poffenberger \& Barrows (1924) conducted early studies on how visual line directions and shapes evoke emotional responses. They found that \textbf{upward-moving or ascending lines} tend to evoke feelings of \textbf{joy and happiness}, while downward-moving lines tend to evoke sadness. This research is foundational to understanding how visual form communicates affect --- relevant to affective computing in typography and visual design.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{Juni \& Gross (2008) found that articles were perceived as more satirical when written in:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Arial \\
+& B.\ Georgia \\
+& \textbf{C.\ Times New Roman \checkmark} \\
+& D.\ Verdana \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Times New Roman\\[0.2cm]
+\textbf{Why this answer:} \\
+Juni \& Gross (2008) demonstrated that \textbf{font choice influences the emotional and tonal interpretation of text}. Participants perceived articles written in \textbf{Times New Roman} as more satirical compared to other fonts. This highlights how typography is not merely aesthetic but carries \textbf{affective connotations} --- a key insight for text-based affective computing.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 4}
+\textit{Relative Subjective Duration (RSD) experiments showed that good typography led participants to:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Underestimate reading time less \\
+& B.\ Overestimate reading time greatly \\
+& \textbf{C.\ Underestimate reading time more \checkmark} \\
+& D.\ Read significantly slower \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Underestimate reading time more\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Relative Subjective Duration (RSD)} measures how participants perceive the passage of time while reading. Research showed that \textbf{good typography} (well-designed, readable text) caused participants to \textbf{underestimate reading time more} --- meaning time seemed to pass faster when text was well-formatted. This ``time flies'' effect reflects the role of typography in producing a positive, engaging reading experience.
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{Why is positive/negative sentiment analysis often insufficient?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Emotions with similar polarity (e.g., fear vs. anger) differ in relevance and meaning \checkmark} \\
+& B.\ Most texts contain no sentiment \\
+& C.\ It cannot detect sarcasm \\
+& D.\ It is computationally expensive \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Emotions of similar polarity differ in relevance and meaning\\[0.2cm]
+\textbf{Why this answer:} \\
+Binary \textbf{positive/negative sentiment analysis} collapses all negative emotions (fear, anger, disgust, sadness) into a single category. However, these emotions carry \textbf{very different meanings and have distinct real-world relevance} --- for example, fear and anger are both negative but require entirely different responses. Fine-grained \textbf{emotion recognition} is therefore necessary for nuanced applications.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{Implicit expressions of emotions (Lee, 2015) refer to:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Emotions directly stated via adjectives \\
+& B.\ Physiological signals embedded in text \\
+& C.\ Metaphors expressing emotional states \\
+& \textbf{D.\ Emotion conveyed without explicit emotional words \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Emotion conveyed without explicit emotional words\\[0.2cm]
+\textbf{Why this answer:} \\
+Lee (2015) distinguishes between \textbf{explicit} and \textbf{implicit} emotional expressions in text. \textbf{Explicit expressions} directly state emotions. \textbf{Implicit expressions} convey emotion \textbf{without using explicit emotional vocabulary} --- through descriptions of situations, actions, or outcomes that imply an emotional state. Retrieving implicit emotions requires deeper semantic context.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 7}
+\textit{Metaphorical emotional expressions create challenges because:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Their meaning cannot be inferred from literal text alone \checkmark} \\
+& B.\ They are too rare to train on \\
+& C.\ They cannot be represented in WordNet \\
+& D.\ They always express anger \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Their meaning cannot be inferred from literal text alone\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Metaphorical emotional expressions} (e.g., ``I'm drowning in grief'') convey emotion through figurative language. Their \textbf{meaning cannot be derived from the literal interpretation} of the words. Standard lexicon-based approaches fail to capture these because the surface words may carry no intrinsic emotional valence, requiring pragmatic reasoning to solve.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{The ISEAR database consists of reports from participants describing:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Metaphorical uses of emotional expressions \\
+& \textbf{B.\ Situations where they experienced one of seven major emotions \checkmark} \\
+& C.\ Annotated news headlines \\
+& D.\ Product reviews labeled for polarity \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Situations where they experienced one of seven major emotions\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{ISEAR (International Survey on Emotion Antecedents and Reactions)} database was collected by Scherer \& Wallbott (1994). Participants were asked to describe \textbf{situations in which they experienced one of seven major emotions}: joy, fear, anger, sadness, disgust, shame, and guilt. It serves as a benchmark narrative dataset for text-based emotion recognition.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{SentiWordNet focuses primarily on:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Dimensional emotion modeling \\
+& B.\ Detecting metaphors in textual data \\
+& C.\ Context-sensitive emotional sequences \\
+& \textbf{D.\ Polarity (positive, negative, objective) of terms \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Polarity (positive, negative, objective) of terms\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{SentiWordNet} is a lexical resource built on top of WordNet that assigns three sentiment scores to each synset: \textbf{positive}, \textbf{negative}, and \textbf{objective} (neutral). It is primarily designed for \textbf{polarity-based sentiment analysis} rather than fine-grained emotion detection or dimensional affect.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{For unsupervised emotion recognition using lexicons, the text emotion is assigned by:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Counting how many emotional words appear \\
+& \textbf{B.\ Finding the class with highest cosine similarity to the text vector \checkmark} \\
+& C.\ Selecting the emotion with the highest frequency in ANEW \\
+& D.\ Applying rule-based keyword matching only \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Finding the class with highest cosine similarity to the text vector\\[0.2cm]
+\textbf{Why this answer:} \\
+In \textbf{unsupervised lexicon-based emotion recognition}, each emotion class is represented as a vector. The input text is also represented as a vector. The text is then assigned to the \textbf{emotion class whose vector has the highest cosine similarity} to the text vector. This process avoids heavily labeled training data.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & ANEW Lexicon Type & B --- False \\
+2 & Poffenberger \& Barrows (1924) & B --- Joy \\
+3 & Juni \& Gross (2008) Font Study & C --- Times New Roman \\
+4 & Relative Subjective Duration (RSD) & C --- Underestimate reading time more \\
+5 & Positive/Negative Sentiment & A --- Emotions differ in relevance and meaning \\
+6 & Implicit Emotional Expressions & D --- Emotion without explicit emotional words \\
+7 & Metaphorical Expressions & A --- Meaning cannot be inferred from literal text \\
+8 & ISEAR Database & B --- Situations evoking seven major emotions \\
+9 & SentiWordNet Focus & D --- Polarity (positive, negative, objective) \\
+10 & Unsupervised Recognition & B --- Highest cosine similarity \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 6 Lecture Materials}}
+
+\end{document}

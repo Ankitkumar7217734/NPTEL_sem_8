@@ -1,0 +1,253 @@
+%% ============================================================
+%% Affective Computing — Week 5 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 5 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 5\par
+\vspace{0.2cm}
+\large Assignment 5 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 5 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{Which of the following is not an application of speech in affective computing?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Driver safety monitoring \\
+& B.\ Mobile communications \\
+& C.\ Diagnostic tools for therapists \\
+& \textbf{D.\ Face recognition unlocking \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Face recognition unlocking\\[0.2cm]
+\textbf{Why this answer:} \\
+Face recognition unlocking is a \textbf{visual biometric} application, not a speech-based one. Driver safety monitoring, mobile communications, and diagnostic tools for therapists all leverage speech and vocal cues for affect recognition.
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{According to Borden et al. (1994), ``how it is said'' refers to:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ The linguistic meaning of the words \\
+& \textbf{B.\ Paralinguistic information reflecting emotional state \checkmark} \\
+& C.\ Speaker identity characteristics \\
+& D.\ Speech segmentation rules \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Paralinguistic information reflecting emotional state\\[0.2cm]
+\textbf{Why this answer:} \\
+Borden et al. distinguish between \textit{what} is said (linguistic content) and \textit{how} it is said. The ``how'' refers to \textbf{paralinguistic cues} --- such as tone, pitch, rhythm, and intensity --- that convey the speaker's emotional state beyond the literal meaning of the words.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{Natural emotional speech databases primarily include:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Speech from trained actors \\
+& B.\ Emotionally synthesized speech \\
+& \textbf{C.\ Spontaneous speech from real-world scenarios \checkmark} \\
+& D.\ Scripted dialogues recorded in studios \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Spontaneous speech from real-world scenarios\\[0.2cm]
+\textbf{Why this answer:} \\
+Natural emotional speech databases collect \textbf{spontaneous, unscripted speech} from real-world situations (e.g., call center recordings, interviews, field recordings). This ensures high ecological validity, unlike acted databases which may contain exaggerated or artificial expressions.
+\vspace{0.4cm}
+
+\subsubsection*{Question 4}
+\textit{Positive emotions always produce lower variability in pitch.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ True \checkmark} \\
+& B.\ False \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- True\\[0.2cm]
+\textbf{Why this answer:} \\
+Research indicates that positive emotions tend to produce \textbf{lower variability in pitch (f0)} compared to negative emotions like anger or fear, which typically show higher pitch variability. Positive emotional states like contentment and calm happiness are associated with more stable, less variable pitch contours. \textit{(Note: This is the correct conceptual finding, though intuition might initially guess false).}
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{The Berlin Emotional Speech Database contains recordings of:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Children interacting with robots \\
+& \textbf{B.\ Professional actors producing emotional German sentences \checkmark} \\
+& C.\ North American speakers producing neutral statements \\
+& D.\ Patients and doctors in clinical settings \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Professional actors producing emotional German sentences\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{Berlin Emotional Speech Database (EMO-DB)} is one of the most widely used acted emotional speech datasets. It contains recordings of \textbf{10 professional German actors} producing sentences in seven emotional states: anger, boredom, disgust, fear, happiness, sadness, and neutral.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{Prosody features include:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ MFCCs \\
+& B.\ SIFT descriptors \\
+& \textbf{C.\ Fundamental frequency and short-term energy \checkmark} \\
+& D.\ Visual intensity curves \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Fundamental frequency and short-term energy\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Prosody features} capture the rhythm, intonation, and stress patterns of speech. Key prosodic features include \textbf{fundamental frequency (f0)} --- which corresponds to perceived pitch --- and \textbf{short-term energy} --- which relates to loudness. MFCCs are spectral features, not prosodic ones.
+\vspace{0.4cm}
+
+\subsubsection*{Question 7}
+\textit{MFCCs are primarily used to represent:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Resonant spectral characteristics \checkmark} \\
+& B.\ Rhythm and intonation patterns \\
+& C.\ Speaker identity features \\
+& D.\ Amplitude variations across time \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Resonant spectral characteristics\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Mel-Frequency Cepstral Coefficients (MFCCs)} represent the \textbf{resonant spectral characteristics} of speech by modeling the shape of the vocal tract's spectral envelope on a perceptually-motivated mel frequency scale. They capture formant-related information critical for distinguishing both phonemes and emotional vocal qualities.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 8}
+\textit{Positive voices typically show which characteristic?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Low pitch and low formant frequencies \\
+& B.\ Low speech rate \\
+& C.\ Flat and monotone amplitude \\
+& \textbf{D.\ High loudness variability and high formant frequencies \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- High loudness variability and high formant frequencies\\[0.2cm]
+\textbf{Why this answer:} \\
+Research on vocal correlates of positive emotions shows that positive voices tend to exhibit \textbf{high loudness variability} (dynamic amplitude changes) and \textbf{higher formant frequencies}, reflecting more animated and energetic vocal production compared to neutral or sad speech.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{A key problem with global normalization of f0 across all speakers is that it:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ May blur emotional differences due to speaker-specific traits \checkmark} \\
+& B.\ Reduces background noise \\
+& C.\ Is too computationally expensive \\
+& D.\ Requires manual annotation \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- May blur emotional differences due to speaker-specific traits\\[0.2cm]
+\textbf{Why this answer:} \\
+Global normalization of fundamental frequency (f0) across all speakers can \textbf{blur emotional differences} because individual speakers have vastly different baseline pitch ranges. A high-pitched neutral voice for one speaker may overlap with an excited voice of another, causing speaker-specific emotional cues to be lost in the normalization process.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{One major open challenge in speech-based affect recognition is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Oversupply of natural databases \\
+& \textbf{B.\ Inter- and intra-speaker variability \checkmark} \\
+& C.\ Perfect cross-lingual generalization \\
+& D.\ Excessive real-time deployment success \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Inter- and intra-speaker variability\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Inter-speaker variability} (differences between speakers) and \textbf{intra-speaker variability} (differences within the same speaker across contexts) remain major open challenges. Different people express the same emotion differently, and the same person may vary their expression depending on context, making robust generalization difficult.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & Speech Applications & D --- Face recognition unlocking \\
+2 & ``How it is said'' & B --- Paralinguistic information \\
+3 & Natural Speech Databases & C --- Spontaneous real-world speech \\
+4 & Positive Emotions \& Pitch & A --- True \\
+5 & Berlin Emotional Speech Database & B --- Professional actors, German sentences \\
+6 & Prosody Features & C --- Fundamental frequency and short-term energy \\
+7 & MFCCs & A --- Resonant spectral characteristics \\
+8 & Positive Voice Characteristics & D --- High loudness variability, high formant frequencies \\
+9 & Global f0 Normalization Problem & A --- May blur emotional differences \\
+10 & Open Challenges & B --- Inter- and intra-speaker variability \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 5 Lecture Materials}}
+
+\end{document}
