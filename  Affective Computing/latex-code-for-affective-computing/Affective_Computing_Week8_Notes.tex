@@ -1,0 +1,255 @@
+%% ============================================================
+%% Affective Computing — Week 8 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 8 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 8\par
+\vspace{0.2cm}
+\large Assignment 8 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 8 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{Skin Conductance (GSR/EDA) measures changes primarily due to:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Sweat gland activity \checkmark} \\
+& B.\ Body temperature \\
+& C.\ Blood pressure \\
+& D.\ Respiration depth \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Sweat gland activity\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Galvanic Skin Response (GSR)}, also known as \textbf{Electrodermal Activity (EDA)}, measures changes in the \textbf{electrical conductance of the skin} that are primarily driven by \textbf{sweat gland activity}. The eccrine sweat glands --- particularly those on the palms and fingertips --- are innervated by the \textbf{sympathetic nervous system} and respond to emotional arousal by secreting sweat, which increases the skin's electrical conductivity. GSR does not measure body temperature, blood pressure, or respiration directly.
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{In GSR signals, the fast, event-related component is called:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ SCL (Skin Conductance Level) \\
+& B.\ EDL (Electrodermal Level) \\
+& \textbf{C.\ SCR (Skin Conductance Response) \checkmark} \\
+& D.\ ERV (Emotional Response Value) \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- SCR (Skin Conductance Response)\\[0.2cm]
+\textbf{Why this answer:} \\
+GSR/EDA signals are decomposed into two main components: the \textbf{tonic component} called \textbf{SCL (Skin Conductance Level)}, which reflects the slowly-varying baseline conductance, and the \textbf{phasic component} called \textbf{SCR (Skin Conductance Response)}, which captures \textbf{fast, event-related changes} triggered by discrete stimuli or emotional events. SCRs are the rapid, transient peaks superimposed on the slower SCL baseline.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{GSR can reveal whether the emotional state is positive or negative.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ True \\
+& \textbf{B.\ False \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- False\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{GSR} is a reliable indicator of \textbf{emotional arousal} --- the intensity or activation level of an emotional state --- but it \textbf{cannot distinguish between positive and negative emotions} (valence). Both excitement (positive, high arousal) and fear (negative, high arousal) produce similar increases in skin conductance. To determine valence, additional modalities such as facial expressions, EEG, or self-reports are required.
+\vspace{0.4cm}
+
+\subsubsection*{Question 4}
+\textit{Skin conductance responses (SCR) correspond to:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Slow tonic changes in conductivity \\
+& \textbf{B.\ Rapid, event-related changes triggered by stimuli \checkmark} \\
+& C.\ Changes due to respiration cycles \\
+& D.\ Variations caused only by temperature \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Rapid, event-related changes triggered by stimuli\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Skin Conductance Responses (SCRs)} are the \textbf{phasic} (fast, transient) components of the electrodermal signal. They are \textbf{rapid increases in skin conductance} that occur in response to \textbf{discrete stimuli} --- such as an emotional image, a startling sound, or a stressful event. SCRs typically peak within 1--5 seconds after stimulus onset and reflect the momentary activation of the sympathetic nervous system.
+\vspace{0.4cm}
+
+\subsubsection*{Question 5}
+\textit{The most emotionally reactive sweat glands are located on:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Forehead \\
+& B.\ Knees \\
+& \textbf{C.\ Palms and soles \checkmark} \\
+& D.\ Back \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Palms and soles\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{eccrine sweat glands} on the \textbf{palms of the hands and soles of the feet} are the most \textbf{emotionally reactive} sweat glands in the body. Unlike thermoregulatory sweat glands found elsewhere on the body, these palmar and plantar glands are primarily controlled by \textbf{emotional and psychological stimuli} rather than temperature. This is why GSR/EDA sensors are typically placed on the fingers or palm.
+\vspace{0.4cm}
+
+
+\subsubsection*{Question 6}
+\textit{In EEG signals, alpha-band power has what relationship with cortical activity?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Direct (more alpha = more activity) \\
+& \textbf{B.\ Inverse (more alpha = less activity) \checkmark} \\
+& C.\ No relationship \\
+& D.\ Only positive emotions change alpha \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Inverse (more alpha = less activity)\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Alpha waves} (8--13 Hz) in EEG are associated with a state of \textbf{relaxed wakefulness} and \textbf{cortical idling}. There is an \textbf{inverse relationship} between alpha-band power and cortical activity: \textbf{higher alpha power} indicates \textbf{less cortical activation} (the brain region is relatively idle), while \textbf{lower alpha power} (alpha suppression or desynchronization) indicates \textbf{greater cortical engagement and processing}.
+\vspace{0.4cm}
+
+\subsubsection*{Question 7}
+\textit{In multimodal emotion recognition, early fusion requires:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Combining classifier decisions \\
+& B.\ Using only a single modality \\
+& C.\ Late-stage hypothesis selection \\
+& \textbf{D.\ Synchronizing signals before concatenation \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Synchronizing signals before concatenation\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Early fusion} (also called feature-level fusion) in multimodal emotion recognition involves \textbf{combining feature vectors from different modalities into a single unified feature vector} before feeding it to a classifier. This approach \textbf{requires temporal synchronization} of all modality signals --- since features from audio, video, and physiological signals must be aligned in time before concatenation. This is in contrast to \textbf{late fusion} (decision-level fusion), which combines the output decisions of separate per-modality classifiers.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{Slow fusion is beneficial because it:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Avoids all redundancy across modalities \\
+& B.\ Assumes strict independence of cues \\
+& \textbf{C.\ Exploits correlations while relaxing synchronization requirements \checkmark} \\
+& D.\ Works only with visual cues \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- Exploits correlations while relaxing synchronization requirements\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Slow fusion} is an intermediate strategy between early and late fusion. It integrates information from different modalities \textbf{gradually over time}, allowing the model to \textbf{exploit cross-modal correlations and temporal dependencies} without requiring the strict frame-level synchronization demanded by early fusion. This makes it more practical and robust for real-world affective computing applications.
+\vspace{0.4cm}
+
+
+\subsubsection*{Question 9}
+\textit{The SEMAINE project aims to train a system that:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Engages in multimodal social interaction as a Sensitive Artificial Listener \checkmark} \\
+& B.\ Predicts emotional valence using only speech \\
+& C.\ Detects emotions using physiological sensors alone \\
+& D.\ Generates emotional facial expressions automatically \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Engages in multimodal social interaction as a Sensitive Artificial Listener\\[0.2cm]
+\textbf{Why this answer:} \\
+The \textbf{SEMAINE project} (Sustained Emotionally coloured Machine-human Interaction using Nonverbal Expression) developed the concept of a \textbf{Sensitive Artificial Listener (SAL)}. The system is designed to engage in \textbf{multimodal social interactions} with human users by perceiving and responding to emotional cues from multiple channels --- including facial expressions, speech prosody, and head gestures --- simulating emotionally appropriate conversational behavior.
+\vspace{0.4cm}
+
+\subsubsection*{Question 10}
+\textit{A challenge in multimodal affect data collection is:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Too many synchronized datasets exist \\
+& B.\ Overabundance of annotated corpora \\
+& C.\ Lack of available audio signals \\
+& \textbf{D.\ Getting spontaneous, subtle expressions with aligned modalities \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Getting spontaneous, subtle expressions with aligned modalities\\[0.2cm]
+\textbf{Why this answer:} \\
+One of the greatest challenges in multimodal affective computing is \textbf{collecting naturalistic data} that captures \textbf{spontaneous, subtle emotional expressions} across multiple modalities with proper \textbf{temporal alignment}. Most existing datasets contain exaggerated, acted emotions that do not reflect real-world affect. Collecting genuine, spontaneous expressions is difficult because they are fleeting and subtle, and ensuring all modalities (audio, video, physiological signals) are properly synchronized adds significant technical complexity.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & GSR/EDA Primary Measure & A --- Sweat gland activity \\
+2 & Fast GSR Component & C --- SCR (Skin Conductance Response) \\
+3 & GSR \& Valence & B --- False \\
+4 & SCR Characteristics & B --- Rapid, event-related changes \\
+5 & Emotionally Reactive Sweat Glands & C --- Palms and soles \\
+6 & EEG Alpha-Band \& Cortical Activity & B --- Inverse (more alpha = less activity) \\
+7 & Early Fusion Requirement & D --- Synchronizing signals before concatenation \\
+8 & Slow Fusion Benefit & C --- Exploits correlations, relaxes sync \\
+9 & SEMAINE Project Goal & A --- Sensitive Artificial Listener \\
+10 & Multimodal Data Collection & D --- Spontaneous expressions with alignment \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 8 Lecture Materials}}
+
+\end{document}

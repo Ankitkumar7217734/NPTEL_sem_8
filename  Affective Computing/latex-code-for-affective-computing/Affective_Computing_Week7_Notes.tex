@@ -1,0 +1,252 @@
+%% ============================================================
+%% Affective Computing — Week 7 Study Notes
+%% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper, left=1.8cm, right=1.8cm, top=1.3cm, bottom=1.8cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\hypersetup{hidelinks, colorlinks=false}
+
+%% ── Table helpers ─────────────────────────────────────────
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+%% ── Section headings ──────────────────────────────────────
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{2pt}
+
+%% ── Page style ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small Affective Computing --- Week 7 \textbar\ Page \thepage}
+
+%% ── Misc helpers ──────────────────────────────────────────
+\newcommand{\bb}[1]{\textbf{#1}}
+\setlength{\parskip}{4pt}
+
+%% ═══════════════════════════════════════════════════════════
+\begin{document}
+\setlength{\arrayrulewidth}{0.4pt}
+
+\begin{center}
+\bfseries\LARGE Affective Computing — Week 7\par
+\vspace{0.2cm}
+\large Assignment 7 Detailed Solutions
+\end{center}
+\vspace{0.5cm}
+
+%% ════════════════════════════════════════════════════════════
+\section*{ASSIGNMENT 7 --- Full Solutions with Explanations}
+
+\subsubsection*{Question 1}
+\textit{Physiological signals are especially valuable in affect detection because they:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ Cannot be voluntarily controlled and reflect pure emotional states \checkmark} \\
+& B.\ Require full attention from the participant \\
+& C.\ Are easier to fake than facial expressions \\
+& D.\ Are unaffected by wearable technologies \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- Cannot be voluntarily controlled and reflect pure emotional states\\[0.2cm]
+\textbf{Why this answer:} \\
+Unlike facial expressions or self-reports, \textbf{physiological signals} such as heart rate, galvanic skin response (GSR), and respiration are governed by the \textbf{autonomic nervous system} and are largely \textbf{involuntary}. This makes them highly valuable for affect detection because they are difficult to consciously fake or suppress, providing a more authentic window into a person's emotional state. This involuntary nature is precisely what gives physiological signals an advantage in affective computing applications.
+\vspace{0.4cm}
+
+\subsubsection*{Question 2}
+\textit{Which of the following is not a physiological measure?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Respiration \\
+& B.\ Electrocardiogram \\
+& C.\ Heart Rate \\
+& \textbf{D.\ Eye-blink frequency \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Eye-blink frequency\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Respiration}, \textbf{Electrocardiogram (ECG)}, and \textbf{Heart Rate} are all direct physiological measures reflecting activity of the body's internal systems (cardiovascular, respiratory). \textbf{Eye-blink frequency}, while measurable and emotionally relevant, is a \textbf{behavioral/oculomotor measure} rather than a physiological one in the strict sense --- it is observed externally and is more susceptible to voluntary control. It falls under the category of behavioral or facial/ocular signals rather than internal physiological signals.
+\vspace{0.4cm}
+
+\subsubsection*{Question 3}
+\textit{Heart rate is strongly associated with which dimension of emotion?}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Valence \\
+& \textbf{B.\ Arousal \checkmark} \\
+& C.\ Dominance \\
+& D.\ Surprise \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Arousal\\[0.2cm]
+\textbf{Why this answer:} \\
+Within the \textbf{dimensional model of emotion} (Russell's Circumplex Model; the VAD model), \textbf{heart rate} is most strongly associated with the \textbf{arousal dimension} --- the degree of activation or excitation in an emotional state. High-arousal emotions (fear, excitement, anger) tend to increase heart rate, while low-arousal emotions (calm, relaxation, sadness) tend to lower it. Heart rate is a poor discriminator for \textbf{valence} (positive vs.\ negative) since both fear and excitement can raise heart rate similarly.
+\vspace{0.4cm}
+
+\subsubsection*{Question 4}
+\textit{A key advantage of PPG (Photo-Plethysmography) over ECG is that PPG:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Provides greater spatial resolution \\
+& \textbf{B.\ Is quicker to attach and less intrusive \checkmark} \\
+& C.\ Measures electrical pulses directly \\
+& D.\ Requires medical-grade gel electrodes \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Is quicker to attach and less intrusive\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{PPG (Photo-Plethysmography)} measures blood volume changes in the microvascular bed of tissue using light (typically via a fingertip or wrist sensor). Compared to \textbf{ECG}, which requires placement of multiple electrodes on the chest with conductive gel, PPG is \textbf{far easier to attach, less intrusive, and more comfortable} for everyday use --- making it ideal for wearable affective computing applications. The trade-off is that PPG is more susceptible to motion artifacts and is an indirect measure of cardiac activity.
+\vspace{0.4cm}
+
+
+\subsubsection*{Question 5}
+\textit{Heart Rate Variability (HRV) measures:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ The average heart rate over the day \\
+& B.\ The electrical intensity of heart contractions \\
+& \textbf{C.\ The variation in RR intervals between beats \checkmark} \\
+& D.\ The number of peaks in each heartbeat waveform \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} C --- The variation in RR intervals between beats\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Heart Rate Variability (HRV)} refers to the \textbf{beat-to-beat variation in the time intervals between consecutive heartbeats} --- specifically the \textbf{RR intervals} (the time between two successive R-peaks in the ECG waveform). HRV is a rich indicator of autonomic nervous system activity: high HRV generally indicates good autonomic flexibility and a relaxed state, while low HRV is associated with stress, fatigue, or high arousal. HRV is widely used as a biomarker for emotional and cognitive states in affective computing.
+\vspace{0.4cm}
+
+\subsubsection*{Question 6}
+\textit{A major limitation of ECG/PPG for affect recognition is that they:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Only measure emotional valence, not arousal \\
+& B.\ Cannot measure changes over short intervals \\
+& C.\ Are too invasive for most participants \\
+& \textbf{D.\ Cannot distinguish positive from negative arousal \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} D --- Cannot distinguish positive from negative arousal\\[0.2cm]
+\textbf{Why this answer:} \\
+ECG and PPG both track \textbf{arousal-related changes} in the cardiovascular system well --- elevated heart rate signals high arousal. However, they \textbf{cannot reliably distinguish between positive high-arousal states} (e.g., excitement, joy) \textbf{and negative high-arousal states} (e.g., fear, anger), because both produce similar cardiovascular signatures. This \textbf{valence ambiguity} is a fundamental limitation, often addressed by combining cardiac signals with other modalities like GSR, facial expressions, or EEG to achieve full emotional characterization.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 7}
+\textit{Physiological signals like HR and GSR are less likely to be consciously manipulated compared to facial expressions.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ True \checkmark} \\
+& B.\ False \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- True\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Heart Rate (HR)} and \textbf{Galvanic Skin Response (GSR)} are mediated by the \textbf{autonomic nervous system} --- a system that operates largely below the threshold of conscious control. While trained individuals (e.g., through biofeedback) can exert limited influence over these signals, in general they are far \textbf{less susceptible to deliberate manipulation} than facial expressions, which involve voluntary muscles and can be consciously posed or suppressed. This is why physiological signals are considered more reliable ground-truth indicators of emotional states.
+\vspace{0.4cm}
+
+\subsubsection*{Question 8}
+\textit{ECG-based heart rate measurements are more accurate than PPG because:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& \textbf{A.\ They measure electrical activity directly \checkmark} \\
+& B.\ They require fewer sensors \\
+& C.\ They work better at long distances \\
+& D.\ They are less sensitive to motion artifacts \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} A --- They measure electrical activity directly\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{ECG (Electrocardiogram)} directly measures the \textbf{electrical signals} generated by the heart's depolarization and repolarization cycles, producing a precise waveform (including the characteristic P-QRS-T complex). This direct electrical measurement provides a highly accurate representation of each heartbeat. \textbf{PPG}, by contrast, indirectly infers heart rate from \textbf{optical changes in blood volume} --- making it slightly less precise and more vulnerable to motion artifacts and signal noise. ECG remains the gold standard for cardiac measurement in affective computing research.
+\vspace{0.4cm}
+
+\subsubsection*{Question 9}
+\textit{GSR can reveal whether the emotional state is positive or negative.}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ True \\
+& \textbf{B.\ False \checkmark} \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- False\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{GSR (Galvanic Skin Response)}, also known as \textbf{Electrodermal Activity (EDA)} or \textbf{Skin Conductance Response (SCR)}, measures changes in the electrical conductance of the skin caused by sweat gland activity --- which is modulated by sympathetic nervous system arousal. GSR is a sensitive indicator of \textbf{arousal level} (high arousal $\rightarrow$ increased GSR) but \textbf{cannot distinguish between positive and negative emotions} --- both excitement (positive) and fear (negative) can produce identical GSR elevations.
+\vspace{0.4cm}
+\newpage
+\subsubsection*{Question 10}
+\textit{Low HRV is typically associated with:}
+\medskip
+
+\begin{tabular}{L{0.3cm} L{14.9cm}}
+& A.\ Relaxation \\
+& \textbf{B.\ Strong stress or arousal \checkmark} \\
+& C.\ Enhanced emotional control \\
+& D.\ Deep sleep \\
+\end{tabular}
+
+\vspace{0.3cm}
+\noindent\textbf{Ans:} B --- Strong stress or arousal\\[0.2cm]
+\textbf{Why this answer:} \\
+\textbf{Low Heart Rate Variability (HRV)} indicates that the time intervals between heartbeats are becoming more uniform and less variable --- a signature of \textbf{heightened sympathetic nervous system activity} (the ``fight-or-flight'' response). This is typically observed during states of \textbf{stress, anxiety, or high arousal}, where the sympathetic system dominates and overrides the naturally variable, parasympathetically-driven rhythm. Conversely, \textbf{high HRV} is associated with relaxation, emotional regulation, and parasympathetic dominance.
+\vspace{0.4cm}
+
+\medskip
+\subsection*{Assignment Quick Answer Summary}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|L{0.8cm}|L{6.2cm}|L{8.2cm}|}
+\hline
+\bb{Q\#} & \bb{Topic} & \bb{Correct Answer} \\
+\hline
+1 & Value of Physiological Signals & A --- Cannot be voluntarily controlled \\
+2 & Not a Physiological Measure & D --- Eye-blink frequency \\
+3 & Heart Rate \& Emotion Dimension & B --- Arousal \\
+4 & PPG Advantage over ECG & B --- Quicker to attach, less intrusive \\
+5 & HRV Definition & C --- Variation in RR intervals \\
+6 & Limitation of ECG/PPG & D --- Cannot distinguish positive/negative arousal \\
+7 & HR \& GSR vs.\ Facial Expressions & True --- Less susceptible to manipulation \\
+8 & ECG Accuracy over PPG & A --- Measures electrical activity directly \\
+9 & GSR \& Valence & False --- GSR cannot reveal valence \\
+10 & Low HRV Association & B --- Strong stress or arousal \\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+{\small\textit{Reference: Affective Computing --- Week 7 Lecture Materials}}
+
+\end{document}
